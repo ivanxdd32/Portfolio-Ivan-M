@@ -7,7 +7,7 @@ export default function Inicio() {
     <section className="h-screen flex flex-col items-center justify-center text-center bg-gray-900 text-white">
       <motion.h1
         className="text-4xl font-bold pb-4"
-        initial={{ opacity: 0, y: -50 }}
+        initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.5}}
       >

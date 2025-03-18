@@ -15,6 +15,9 @@ export default function Projectos() {
       <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6 mt-8 py-4 px-20">
         <motion.div
           className="bg-gray-800 p-4 rounded-lg shadow-lg hover:scale-105 transition-transform"
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.25, delay: 0.4}}
           whileHover={{ scale: 1.05 }}
         >
           <h3 className="text-xl font-semibold">Proyecto 1</h3>
@@ -22,6 +25,9 @@ export default function Projectos() {
         </motion.div>
         <motion.div
           className="bg-gray-800 p-4 rounded-lg shadow-lg hover:scale-105 transition-transform"
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.25, delay: 0.6}}
           whileHover={{ scale: 1.05 }}
         >
           <h3 className="text-xl font-semibold">Proyecto 2</h3>
@@ -29,6 +35,9 @@ export default function Projectos() {
         </motion.div>
         <motion.div
           className="bg-gray-800 p-4 rounded-lg shadow-lg hover:scale-105 transition-transform"
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.25, delay: 0.8}}
           whileHover={{ scale: 1.05 }}
         >
           <h3 className="text-xl font-semibold">Proyecto 3</h3>
