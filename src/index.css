@@ -4,8 +4,3 @@ body {
   margin: 0;
   padding: 0;
 }
-
-#smooth-content {
-  height: 200vh; /* Para permitir el desplazamiento */
-  padding: 2rem;
-}
