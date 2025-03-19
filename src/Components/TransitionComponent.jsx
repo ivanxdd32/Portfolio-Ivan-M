@@ -9,14 +9,6 @@ const TransitionComponent = ({ children }) => {
   const location = useLocation();
   const { toggleCompleted } = useContext(TransitionContext);
 
-  useEffect(() => {
-    // Bloquear el scroll mientras hay animación
-    document.body.style.overflow = 'hidden';
-    return () => {
-      document.body.style.overflow = 'auto';
-    };
-  }, []);
-
   return (
     <SwitchTransition>
       <Transition

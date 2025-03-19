@@ -16,7 +16,7 @@ export default function Header() {
           <h1 className="text-xl font-bold">Portfolio</h1>
         </motion.div>
         <nav>
-          <ul className="flex gap-4">
+          <ul className="flex gap-4 text-xs sm:text-base">
             {[
               { path: "/", label: "Sobre mí" },
               { path: "/proyectos", label: "Proyectos" },

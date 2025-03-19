@@ -12,7 +12,7 @@ export default function Projectos() {
       >
         Mis Proyectos
       </motion.h2>
-      <div className="grid grid-cols-1 gap-6 mt-8 py-4 px-20">
+      <div className="grid grid-cols-1 gap-6 mt-8 py-4 px-6 sm:px-10 md:px-16 lg:px-20">
         <motion.div
           className="bg-gray-800 p-4 rounded-lg shadow-lg hover:scale-105 transition-transform"
           initial={{ opacity: 0, x: -50 }}
