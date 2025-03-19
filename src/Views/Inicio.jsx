@@ -31,7 +31,7 @@ export default function Inicio() {
 
       gsap.fromTo(
         nextSectionRef.current,
-        { y: "0vh" },
+        { y: "0" },
         {
           y: 0,
           ease: "power2.out",
