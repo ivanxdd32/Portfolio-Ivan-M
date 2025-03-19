@@ -22,7 +22,7 @@ export default function Inicio() {
         scrub: 0.5,
         snap: {
           snapTo: "labels", // Se ancla a las secciones
-          duration: 0.1, // Duración del ajuste
+          duration: 0.8, // Duración del ajuste
           ease: "power1.inOut",
         },
       },
