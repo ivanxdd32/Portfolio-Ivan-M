@@ -14,33 +14,41 @@ export default function Inicio() {
   const nextSectionRef = useRef(null);
 
   useEffect(() => {
-    gsap.to(sectionRef.current, {
-      opacity: 0.5,
-      scale: 0.2,
-      scrollTrigger: {
-        trigger: sectionRef.current,
-        start: "top top",
-        end: "bottom 49%",
-        scrub: 0.5,
-        snap: { snapTo: "labels", duration: 0.8, ease: "power1.inOut" },
-      },
-    });
-
-    gsap.fromTo(
-      nextSectionRef.current,
-      { y: "0" },
-      {
-        y: 0,
-        ease: "power2.out",
+    const timeout = setTimeout(() => {
+      gsap.to(sectionRef.current, {
+        opacity: 0.5, 
+        scale: 0.2, 
         scrollTrigger: {
-          trigger: nextSectionRef.current,
-          start: "top bottom",
-          end: "top top",
-          scrub: 0.3,
-          snap: 1,
+          trigger: sectionRef.current,
+          start: "top top",
+          end: "bottom 49%",
+          scrub: 0.5,
+          snap: {
+            snapTo: "labels",
+            duration: 0.8,
+            ease: "power1.inOut",
+          },
         },
-      }
-    );
+      });
+
+      gsap.fromTo(
+        nextSectionRef.current,
+        { y: "0vh" },
+        {
+          y: 0,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: nextSectionRef.current,
+            start: "top bottom",
+            end: "top top",
+            scrub: 0.3,
+            snap: 1,
+          },
+        }
+      );
+    }, 1000);
+
+    return () => clearTimeout(timeout); // Limpieza del timeout para evitar problemas si el usuario cambia de página rápido
   }, []);
 
   return (
