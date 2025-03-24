@@ -7,7 +7,7 @@ export default function Header() {
 
   return (
     <div className="font-sans bg-gray-900 text-white">
-      <header className="fixed top-0 left-0 w-full flex justify-between items-center p-4 bg-gray-800 shadow-md z-50">
+      <header className="fixed top-0 left-0 w-full flex justify-between items-center p-4 md:pl-6 bg-gray-800 shadow-md z-50">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -16,7 +16,7 @@ export default function Header() {
           <h1 className="text-xl font-bold">Ivan<span className='text-blue-400'>.dev</span></h1>
         </motion.div>
         <nav>
-          <ul className="flex gap-4 text-xs sm:text-base">
+          <ul className="flex gap-4 text-xs sm:text-base md:pr-5">
             {[
               { path: "/", label: "Sobre mí" },
               { path: "/proyectos", label: "Proyectos" },
