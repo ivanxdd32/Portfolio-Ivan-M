@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { FaLinkedin, FaPaperPlane } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaPaperPlane } from "react-icons/fa";
 
 export default function Contacto() {
   const formRef = useRef(null);
@@ -44,9 +44,9 @@ export default function Contacto() {
   };
 
   return (
-    <section className="h-screen flex flex-col items-center justify-center text-center bg-gray-900 text-white py-20 px-4">
+    <section className="min-h-screen flex flex-col items-center justify-center text-center bg-gray-900 text-white py-20 px-4">
       <motion.h2
-        className="text-3xl font-bold text-center pt-4"
+        className="text-3xl font-bold text-center pt-10"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.5 }}
@@ -142,6 +142,21 @@ export default function Contacto() {
         whileTap={{ scale: 0.95 }}
       >
         <FaLinkedin className="text-xl" /> Visita mi LinkedIn
+      </motion.a>
+      
+      {/* Botón de GitHub */}
+      <motion.a
+        href="https://github.com/ivanxdd32"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-6 flex items-center gap-2 bg-gray-800 px-4 py-2 rounded-lg text-white font-semibold hover:bg-gray-700 transition"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, delay: 1.2 }}
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        <FaGithub className="text-xl" /> Visita mi GitHub
       </motion.a>
     </section>
   );
