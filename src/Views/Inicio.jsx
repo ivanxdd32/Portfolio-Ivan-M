@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { motion } from "framer-motion";
 import { FaReact, FaNodeJs, FaGitAlt, FaGithub, FaChevronDown } from "react-icons/fa";
-import { SiTailwindcss, SiMysql, SiJavascript, SiPostman, SiHtml5, SiCss3 } from "react-icons/si";
+import { SiTailwindcss, SiMysql, SiJavascript, SiPostman, SiHtml5, SiCss3, SiExpress } from "react-icons/si";
 import "../App.css";
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
@@ -69,19 +69,17 @@ export default function Inicio() {
       >
         {/* Contenedor de texto alineado a la izquierda */}
         <motion.div
-          className="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-0 items-center shadow-2xl"
+          className="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-0 items-center lg:shadow-2xl"
           initial={{ opacity: 0, scale: 0.8, x: 50 }}
           animate={{ opacity: 1, scale: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
         >
           {/* Columna izquierda - Texto */}
           <div className="lg:p-12 lg:text-left space-y-4 lg:space-y-6 w-full h-full flex flex-col justify-center text-left lg:relative lg:bg-white lg:text-gray-800 rounded-l-lg">
-            
-          {/* Texto */}
           <motion.h1 
             className="text-xl font-bold sm:text-3xl"
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
           >
             ¡Hola, soy <span className='text-blue-400 lg:text-blue-600'>Ivan Martinez!</span>
@@ -136,29 +134,40 @@ export default function Inicio() {
       </section>
 
       {/* TECNOLOGÍAS */}
-      <section ref={nextSectionRef} className="h-auto py-20 flex flex-col items-center justify-center bg-gray-900">
+      <section 
+        ref={nextSectionRef} 
+        className="h-auto py-20 px-6 md:px-12 flex flex-col items-center justify-center bg-gray-900"
+      >
+        <div className="w-full max-w-5xl flex flex-col lg:flex-row lg:justify-between gap-8">
+          {/* Lenguajes de Programación */}
+          <SectionCard title="Lenguajes de Programación" color="text-yellow-400">
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:flex lg:flex-col lg:gap-4">
+              <SkillCard icon={<SiJavascript />} label="JavaScript" color="text-yellow-400" url="https://developer.mozilla.org/en-US/docs/Web/JavaScript" />
+              <SkillCard icon={<SiMysql />} label="MySQL" color="text-blue-500" url="https://dev.mysql.com/doc/" />
+              <SkillCard icon={<SiHtml5 />} label="HTML" color="text-red-500" url="https://developer.mozilla.org/en-US/docs/Web/HTML" />
+              <SkillCard icon={<SiCss3 />} label="CSS" color="text-blue-400" url="https://developer.mozilla.org/en-US/docs/Web/CSS" />
+            </div>
+          </SectionCard>
 
-        {/* Lenguajes de Programación */}
-        <SectionCard title="Lenguajes de Programación" color="text-yellow-400">
-          <SkillCard icon={<SiJavascript />} label="JavaScript" color="text-yellow-400" />
-          <SkillCard icon={<SiMysql />} label="MySQL" color="text-blue-500" />
-          <SkillCard icon={<SiHtml5 />} label="HTML" color="text-red-500" />
-          <SkillCard icon={<SiCss3 />} label="CSS" color="text-blue-400" />
-        </SectionCard>
+          {/* Frameworks y Librerías */}
+          <SectionCard title="Frameworks y Librerías" color="text-blue-400">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:flex lg:flex-col lg:gap-4">
+              <SkillCard icon={<FaReact />} label="React" color="text-blue-400" url="https://react.dev/" />
+              <SkillCard icon={<SiTailwindcss />} label="Tailwind CSS" color="text-teal-400" url="https://tailwindcss.com/docs" />
+              <SkillCard icon={<FaNodeJs />} label="Node.js" color="text-green-500" url="https://nodejs.org/en/docs/" />
+              <SkillCard icon={<SiExpress />} label="Express.js" color="text-gray-300" url="https://expressjs.com/" />
+            </div>
+          </SectionCard>
 
-        {/* Frameworks y Librerías */}
-        <SectionCard title="Frameworks y Librerías" color="text-blue-400">
-          <SkillCard icon={<FaReact />} label="React" color="text-blue-400" />
-          <SkillCard icon={<SiTailwindcss />} label="Tailwind CSS" color="text-teal-400" />
-          <SkillCard icon={<FaNodeJs />} label="Node.js" color="text-green-500" />
-        </SectionCard>
-
-        {/* Herramientas y Entornos */}
-        <SectionCard title="Herramientas y Entornos" color="text-green-400">
-          <SkillCard icon={<FaGitAlt />} label="Git" color="text-red-500" />
-          <SkillCard icon={<FaGithub />} label="GitHub" color="text-gray-400" />
-          <SkillCard icon={<SiPostman />} label="Postman" color="text-orange-500" />
-        </SectionCard>
+          {/* Herramientas y Entornos */}
+          <SectionCard title="Herramientas y Entornos" color="text-green-400">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:flex lg:flex-col lg:gap-4">
+              <SkillCard icon={<FaGitAlt />} label="Git" color="text-red-500" url="https://git-scm.com/doc" />
+              <SkillCard icon={<FaGithub />} label="GitHub" color="text-gray-400" url="https://docs.github.com/en" />
+              <SkillCard icon={<SiPostman />} label="Postman" color="text-orange-500" url="https://learning.postman.com/docs/getting-started/introduction/" />
+            </div>
+          </SectionCard>
+        </div>
       </section>
     </div>
   );
@@ -178,12 +187,13 @@ const SectionCard = ({ title, children, color }) => (
 );
 
 // Componente de Tarjeta de Habilidad
-const SkillCard = ({ icon, label, color }) => (
+const SkillCard = ({ icon, label, color, url }) => (
   <motion.div
-    className={`flex flex-col items-center p-4 rounded-lg shadow-md bg-gray-700 ${color} hover:scale-110 hover:shadow-lg transition-transform`}
+    className={`flex flex-col items-center p-4 rounded-lg cursor:pointer shadow-md bg-gray-700 ${color} hover:scale-110 hover:shadow-lg transition-transform md:mx-4 m-2`}
     initial={{ scale: 0.8, opacity: 0 }}
     whileInView={{ scale: 1, opacity: 1 }}
     transition={{ duration: 0.5 }}
+    onClick={() => window.open(url, "_blank")}
   >
     <div className="text-5xl mb-2">{icon}</div>
     <span className="text-lg">{label}</span>
