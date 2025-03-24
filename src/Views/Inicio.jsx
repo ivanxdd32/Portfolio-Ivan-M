@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
@@ -12,6 +12,7 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 export default function Inicio() {
   const sectionRef = useRef(null);
   const nextSectionRef = useRef(null);
+  const [showArrow, setShowArrow] = useState(false)
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -51,43 +52,91 @@ export default function Inicio() {
     return () => clearTimeout(timeout); // Limpieza del timeout para evitar problemas si el usuario cambia de página rápido
   }, []);
 
+  useEffect(() => {
+    // Retrasa la aparición de la flecha 0.5s
+    const timer = setTimeout(() => {
+      setShowArrow(true);
+    }, 500);
+
+  return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div>
-      {/* HERO */}
-      <section ref={sectionRef} className="h-screen flex flex-col items-center justify-center text-center bg-gray-900 text-white">
-        <motion.h1 
-          className="text-4xl font-bold text-blue-400"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
+      <section 
+        ref={sectionRef} 
+        className="h-screen flex flex-col lg:flex-row items-center justify-center text-white bg-gray-900 lg:bg-gray-300 px-10"
+      >
+        {/* Contenedor de texto alineado a la izquierda */}
+        <motion.div
+          className="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-0 items-center shadow-2xl"
+          initial={{ opacity: 0, scale: 0.8, x: 50 }}
+          animate={{ opacity: 1, scale: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
         >
-          ¡Hola, soy Ivan Martinez!
-        </motion.h1>
+          {/* Columna izquierda - Texto */}
+          <div className="lg:p-12 lg:text-left space-y-4 lg:space-y-6 w-full h-full flex flex-col justify-center text-left lg:relative lg:bg-white lg:text-gray-800 rounded-l-lg">
+            
+          {/* Texto */}
+          <motion.h1 
+            className="text-xl font-bold sm:text-3xl"
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+          >
+            ¡Hola, soy <span className='text-blue-400 lg:text-blue-600'>Ivan Martinez!</span>
+          </motion.h1>
 
-        <motion.p 
-          className="mt-4 text-lg text-gray-300"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.5 }}
-        >
-          Desarrollador apasionado por la tecnología y el desarrollo web.
-        </motion.p>
+          <motion.p 
+            className="mt-4 text-md text-gray-300 sm:text-xl lg:text-gray-800 lg:pl-1"
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.7 }}
+          >
+            Desarrollador apasionado por la tecnología y el desarrollo web.
+          </motion.p>
+
+          {/* Fondo negro en la esquina inferior derecha */}
+          <div 
+            className="absolute bottom-0 right-0 w-32 h-16 lg:bg-[#003140] lg:w-48 lg:h-20"
+            style={{ clipPath: 'polygon(0% 100%, 105% 48%, 100% 105%, 0% 105%)' }}
+          >
+          </div>
+        </div>
+
+          {/* Columna derecha - GIF */}
+          <motion.div 
+            className="flex justify-center"
+            initial={{ opacity: 0, scale: 0.8, x: -50 }}
+            animate={{ opacity: 1, scale: 1, x: 0 }}
+            transition={{ duration: 0.8}}
+          >
+            <img 
+              src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" 
+              alt="Coding Gif" 
+              className="w-72 rounded-lg lg:rounded-none lg:rounded-r-lg lg:w-full lg:h-full"
+            />
+          </motion.div>
+        </motion.div>
 
         {/* 🔽 Flecha animada indicando que hay más contenido */}
-        <div className="absolute bottom-10 flex flex-col items-center">
-          <motion.div
-            className="flex flex-col items-center text-blue-400"
-            animate={{ y: [0, 10, 0] }}
-            transition={{ repeat: Infinity, duration: 1, ease: "easeInOut" }}
-          >
-            <p className="text-gray-400 text-sm mb-2">Ver más</p>
-            <FaChevronDown className="text-3xl" />
-          </motion.div>
-        </div>
+        {showArrow && (
+          <div className="absolute bottom-10 flex flex-col items-center">
+            <motion.div
+              className="flex flex-col items-center text-blue-600"
+              animate={{ y: [0, 10, 0] }}
+              transition={{ repeat: Infinity, duration: 1.2, ease: "easeInOut" }}
+              onClick={() => nextSectionRef.current?.scrollIntoView({ behavior: "smooth" })}
+            >
+              <p className="text-gray-400 text-sm mb-2 lg:text-gray-800">Ver más</p>
+              <FaChevronDown className="text-3xl" />
+            </motion.div>
+          </div>
+        )}
       </section>
 
       {/* TECNOLOGÍAS */}
-      <section ref={nextSectionRef} className="h-auto py-20 flex flex-col items-center justify-center bg-gradient-to-r from-blue-900 via-black to-gray-900 text-white px-6">
+      <section ref={nextSectionRef} className="h-auto py-20 flex flex-col items-center justify-center bg-gray-900">
 
         {/* Lenguajes de Programación */}
         <SectionCard title="Lenguajes de Programación" color="text-yellow-400">
