@@ -41,12 +41,12 @@ export default function Proyectos() {
   const [proyectoActivo, setProyectoActivo] = useState(null);
   const [animando, setAnimando] = useState(false);
   const [animandoSalida, setAnimandoSalida] = useState(false);
-  const [animandoEntrada, setAnimandoEntrada] = useState(true); // Estado para la animación de carga
+  const [animandoEntrada, setAnimandoEntrada] = useState(true);
 
   useEffect(() => {
     setTimeout(() => {
       setAnimandoEntrada(false);
-    }, 1000); // Dura 1 segundo
+    }, 2000) // Dura 1 segundo
   }, []);
 
   const cerrarProyecto = () => {
@@ -77,7 +77,7 @@ export default function Proyectos() {
   return (
     <section className="min-h-screen flex flex-col items-center justify-center text-center bg-gray-900 text-white py-20 px-4 overflow-hidden">
       <motion.h2
-        className="text-3xl font-bold text-center pt-4 pb-8"
+        className="text-3xl font-bold text-center pt-4 pb-10"
           initial="hidden"
           animate="visible"
       >
@@ -118,7 +118,7 @@ export default function Proyectos() {
           <div className="absolute inset-0 w-full h-full bg-cover bg-center blur-sm" style={{ backgroundImage: `url(${proyectoActivo.imagen})` }}></div>
 
           <motion.button
-            className="absolute top-20 right-4 w-12 h-12 flex items-center cursor-pointer justify-center text-white text-2xl font-bold bg-gray-800 border border-gray-700 rounded-full shadow-lg hover:bg-gray-600 transition-all duration-300"
+            className="absolute top-20 right-4 w-12 h-12 flex items-center z-1 cursor-pointer justify-center text-white text-2xl font-bold bg-gray-800 border border-gray-700 rounded-full shadow-lg hover:bg-gray-600 transition-all duration-300"
             onClick={() => setProyectoActivo(null)}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
