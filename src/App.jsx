@@ -5,6 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import { BrowserRouter as Router } from "react-router-dom";
 import "./App.css";
+import "animate.css";
 
 import Header from "./Components/Header";
 import AppRouter from "./Router/AppRouter";
