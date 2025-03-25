@@ -44,7 +44,7 @@ export default function Contacto() {
   };
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center text-center bg-gray-900 text-white py-20 px-4">
+    <section className="min-h-screen flex flex-col items-center justify-center text-center bg-gray-900 text-white py-20 px-4 overflow-hidden">
       <motion.h2
         className="text-3xl font-bold text-center pt-10"
         initial={{ opacity: 0, y: 20 }}
@@ -69,7 +69,7 @@ export default function Contacto() {
         className="w-full max-w-md bg-gray-800 p-6 rounded-lg shadow-md"
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.7, delay: 0.8 }}
+        transition={{ duration: 0.5, delay: 0.8 }}
       >
         <div className="mb-4">
           <label className="block text-left text-gray-400 font-bold pb-2">Nombre</label>
@@ -134,10 +134,8 @@ export default function Contacto() {
         href="https://www.linkedin.com/in/ivan-andres-martinez-rios-7b9140266"
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-6 flex items-center gap-2 bg-blue-600 px-4 py-2 rounded-lg text-white font-semibold hover:bg-blue-700 transition"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, delay: 1 }}
+        className="mt-6 flex items-center gap-2 bg-blue-600 px-4 py-2 rounded-lg text-white font-semibold hover:bg-blue-700 transition animate__animated animate__backInUp"
+        transition={{ duration: 1, delay: 1 }}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
@@ -149,10 +147,8 @@ export default function Contacto() {
         href="https://github.com/ivanxdd32"
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-6 flex items-center gap-2 bg-gray-800 px-4 py-2 rounded-lg text-white font-semibold hover:bg-gray-700 transition"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, delay: 1.2 }}
+        className="mt-6 flex items-center gap-2 bg-gray-800 px-5.5 py-2 rounded-lg text-white font-semibold hover:bg-gray-700 transition animate__animated animate__backInUp"
+        transition={{ duration: 1, delay: 1.2 }}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
