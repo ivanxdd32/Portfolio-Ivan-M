@@ -31,7 +31,7 @@ const proyectos = [
       "Este es mi portafolio web, un sitio moderno y dinámico donde muestro mis proyectos, habilidades y experiencia. Implementa animaciones fluidas y efectos visuales avanzados para una experiencia atractiva e interactiva.",
     tecnologias: ["HTML", "TAILWINDCSS", "REACT", "VITE", "FRAMER MOTION", "GSAP", "NODEMAILER", "ANIMATE.CSS"],
     imagen: portfolio,
-    deploy: "http://localhost:5173/",
+    deploy: "https://portfolio-ivan-m.onrender.com/",
   },
 ];
 
