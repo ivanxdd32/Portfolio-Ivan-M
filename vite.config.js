@@ -1,18 +1,14 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
-import { resolve } from 'path'
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  build: {
-    outDir: 'dist', // Asegura que la salida es dist
-    rollupOptions: {
-      input: {
-        main: resolve(__dirname, 'index.html'),
-      }
-    }
+  base: "/", // Asegura que todas las rutas sean relativas a la raíz
+  server: {
+    hmr: true, // Recarga en caliente
   },
-  // Copiar _redirects a dist/
-  publicDir: 'public',
+  build: {
+    outDir: "dist", // Carpeta de salida
+  }
 })
