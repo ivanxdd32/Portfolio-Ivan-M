@@ -73,7 +73,7 @@ export default function Proyectos() {
       setAnimandoEntrada(false);
       setTimeout(() => setAnimandoEntrada(true), 10);
       setTimeout(() => setAnimandoEntrada(false), 1200);
-    }, 100);
+    }, 200);
   };
 
   const cerrandoProyecto = () => {
@@ -149,7 +149,8 @@ export default function Proyectos() {
 
       {proyectoActivo && (
         <motion.div
-          className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-80 p-4 animate__animated animate__zoomInUp"
+          className={`fixed inset-0 flex items-center justify-center bg-black bg-opacity-80 p-4 
+          ${animandoSalida ? "animate__animated animate__fadeOutUpBig" : "animate__animated animate__zoomInUp"}`}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
