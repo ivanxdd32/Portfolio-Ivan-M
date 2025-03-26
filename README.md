@@ -1,6 +1,6 @@
-# Portfolio de Ivan
+# Mi portafolio web
 
-Este es el portafolio personal de **Ivan**, donde se presentan mis proyectos y habilidades en desarrollo web. El proyecto está construido con **React** en el frontend y un **backend en Node.js** para el manejo de formularios de contacto y otras funcionalidades.
+Este es mi **portafolio web personal**, donde se presentan mis proyectos y habilidades en desarrollo web. El proyecto está construido con **React** en el frontend y un **backend en Node.js** para el manejo de formularios de contacto y otras funcionalidades.
 
 ## Tecnologías utilizadas
 
@@ -27,9 +27,9 @@ El proyecto está dividido en dos partes:
 ### 1. **Frontend**:
    - El frontend está desarrollado en **React** y se sirve como una aplicación estática a través de **Render**.
    - Rutas importantes:
-     - **/ (Raíz)**: Página principal que muestra una bienvenida y enlaces a los proyectos y habilidades.
-     - **/contacto**: Página con un formulario de contacto para enviar correos electrónicos directamente desde el sitio.
+     - **/inicio (Raíz)**: Página principal que muestra una bienvenida y mis habilidades.
      - **/proyectos**: Página que muestra mis proyectos personales, con animaciones al cargar los elementos.
+     - **/contacto**: Página con un formulario de contacto para enviar correos electrónicos directamente desde el sitio.
 
 ### 2. **Backend**:
    - El backend está construido con **Node.js** y **Express** y se encarga de manejar las solicitudes de contacto y enviar correos electrónicos.
@@ -43,3 +43,73 @@ El proyecto está dividido en dos partes:
 
    ```bash
    git clone https://github.com/tu_usuario/tu_repo.git
+
+2. **Frontend**:
+
+   - Navega a la carpeta del frontend:
+
+     ```bash
+     cd frontend
+     ```
+
+   - Instala las dependencias:
+
+     ```bash
+     npm install
+     ```
+
+   - Ejecuta el servidor de desarrollo:
+
+     ```bash
+     npm run dev
+     ```
+
+   - El frontend debería estar corriendo en `http://localhost:3000`.
+
+3. **Backend**:
+
+   - Navega a la carpeta del backend:
+
+     ```bash
+     cd backend
+     ```
+
+   - Instala las dependencias:
+
+     ```bash
+     npm install
+     ```
+
+   - Crea un archivo `.env` y agrega tus credenciales para el correo electrónico:
+
+     ```env
+     EMAIL_USER=tu_email@gmail.com
+     EMAIL_PASS=tu_contraseña_de_email
+     ```
+
+   - Ejecuta el servidor de backend:
+
+     ```bash
+     npm start
+     ```
+
+   - El backend estará corriendo en `http://localhost:5000`.
+
+4. Para desplegar ambos, puedes usar **Render**. El frontend es un **Static Site**, mientras que el backend es una **API** de **Node.js**.
+
+## Despliegue
+
+1. **Frontend**: El frontend está desplegado en [Render](https://portfolio-ivan-m.onrender.com), donde se sirve como una aplicación estática.
+
+2. **Backend**: El backend está desplegado en [Render](https://portfolio-ivan-m-bc.onrender.com), y maneja las solicitudes de contacto enviadas desde el frontend.
+
+## Mejoras futuras
+
+- Agregar más interactividad a los proyectos.
+- Incluir un sistema de autenticación y autorización.
+- Mejorar la interfaz de usuario con animaciones y transiciones más complejas.
+- Agregar un blog o sección de publicaciones.
+
+## Licencia
+
+Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
