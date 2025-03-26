@@ -48,6 +48,10 @@ app.post("/send-email", emailLimiter, async (req, res) => {
   }
 });
 
+app.get("/", (req, res) => {
+  res.send("El servidor está funcionando correctamente 🚀");
+});
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);
