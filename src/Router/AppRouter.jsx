@@ -3,9 +3,9 @@ import { Routes, Route } from 'react-router-dom';
 
 import { TransitionProvider } from '../Context/TransitionContext';
 import TransitionComponent from '../Components/TransitionComponent';
-import Inicio from '../views/Inicio';
-import Proyectos from '../views/Proyectos';
-import Contacto from '../views/Contacto';
+import Inicio from '../Views/Inicio';
+import Proyectos from '../Views/Proyectos';
+import Contacto from '../Views/Contacto';
 
 const AppRouter = () => {
   return (
