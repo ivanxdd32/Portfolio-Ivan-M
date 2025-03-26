@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import nodemailer from "nodemailer";
+import rateLimit from "express-rate-limit";
 
 // Cargar variables de entorno
 dotenv.config();
@@ -10,8 +11,17 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+const emailLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutos
+  max: 5, // Máximo 5 solicitudes por IP cada 15 minutos
+  message: {
+    success: false,
+    message: "Demasiadas solicitudes. Inténtalo más tarde.",
+  },
+});
+
 // Ruta para enviar correos
-app.post("/send-email", async (req, res) => {
+app.post("/send-email", emailLimiter, async (req, res) => {
   const { name, email, message } = req.body;
 
   try {
