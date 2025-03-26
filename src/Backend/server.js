@@ -8,7 +8,13 @@ import rateLimit from "express-rate-limit";
 dotenv.config();
 
 const app = express();
-app.use(cors());
+
+// Configuración de CORS, cambiamos las URLs según el entorno
+const corsOptions = {
+  origin: "https://portfolio-ivan-m.onrender.com", // Cambia esta URL por la URL de tu frontend en Render
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 const emailLimiter = rateLimit({
