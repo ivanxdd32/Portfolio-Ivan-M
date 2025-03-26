@@ -5,13 +5,19 @@ import { resolve } from 'path'
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: "/", // Asegura rutas correctas en producción
+  base: "/", 
+  publicDir: "public",  // Asegura que Vite copie _redirects
   build: {
     outDir: "dist",
     rollupOptions: {
       input: {
-        main: resolve(__dirname, 'index.html')
-      }
-    }
+        main: resolve(__dirname, "index.html"),
+      },
+    },
+  },
+  server: {
+    fs: {
+      allow: ["public"], // Permitir acceso a la carpeta public
+    },
   }
 })
