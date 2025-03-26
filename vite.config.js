@@ -9,6 +9,7 @@ export default defineConfig({
   publicDir: "public",  // Asegura que Vite copie _redirects
   build: {
     outDir: "dist",
+    assetsDir: "assets",
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
