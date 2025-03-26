@@ -20,7 +20,7 @@ export default function Contacto() {
     };
 
     try {
-      const response = await fetch("https://portfolio-ivan-m-bc.onrender.com/", {
+      const response = await fetch("https://portfolio-ivan-m-bc.onrender.com/send-email", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
