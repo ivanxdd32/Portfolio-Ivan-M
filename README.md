@@ -46,12 +46,6 @@ El proyecto está dividido en dos partes:
 
 2. **Frontend**:
 
-   - Navega a la carpeta del frontend:
-
-     ```bash
-     cd frontend
-     ```
-
    - Instala las dependencias:
 
      ```bash
