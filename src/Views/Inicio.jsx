@@ -91,7 +91,7 @@ export default function Inicio() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.7 }}
           >
-            Desarrollador apasionado por la tecnología y el desarrollo web.
+            Desarrollador apasionado por la tecnología, ciberseguridad y el desarrollo web.
           </motion.p>
 
           {/* Fondo negro en la esquina inferior derecha */}
