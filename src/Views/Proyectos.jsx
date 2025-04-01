@@ -6,6 +6,7 @@ import "animate.css"; // Asegura que Animate.css esté importado
 import tareku from "../assets/Tareku.png";
 import imh4nny_hub from "../assets/Imh4nny_hub.png";
 import portfolio from "../assets/Portfolio.png";
+import imh4nny_hupdate from "../assets/Imh4nny_hubUpdate.png";
 
 const proyectos = [
   {
@@ -32,6 +33,15 @@ const proyectos = [
     tecnologias: ["HTML", "TAILWINDCSS", "REACT", "VITE", "FRAMER MOTION", "GSAP", "NODEMAILER", "ANIMATE.CSS"],
     imagen: portfolio,
     deploy: "https://portfolio-ivan-m.onrender.com/",
+  },
+  {
+    id: 4,
+    nombre: "IMH4NNY HUPDATE",
+    descripcion:
+      "Nueva versión de IMH4NNY HUB, representa una mejora significativa en diseño, interactividad y usabilidad. Ahora cuenta con una interfaz aún más dinámica y atractiva, con una mejor disposición de los elementos para una experiencia de usuario más fluida.",
+    tecnologias: ["HTML", "TAILWINDCSS", "REACT", "VITE", "FRAMER MOTION", "GSAP", "ANIMATE.CSS"],
+    imagen: imh4nny_hupdate,
+    deploy: "https://imh4nny-hubupdate.onrender.com/",
   },
 ];
 
