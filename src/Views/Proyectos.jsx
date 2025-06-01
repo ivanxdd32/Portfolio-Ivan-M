@@ -7,6 +7,7 @@ import tareku from "../assets/Tareku.png";
 import imh4nny_hub from "../assets/Imh4nny_hub.png";
 import portfolio from "../assets/Portfolio.png";
 import imh4nny_hupdate from "../assets/Imh4nny_hubUpdate.png";
+import ScientistCalc from "../assets/ScientistCalc.png"
 
 const proyectos = [
   {
@@ -42,6 +43,15 @@ const proyectos = [
     tecnologias: ["HTML", "TAILWINDCSS", "REACT", "VITE", "FRAMER MOTION", "GSAP", "ANIMATE.CSS"],
     imagen: imh4nny_hupdate,
     deploy: "https://imh4nny-hubupdate.onrender.com/",
+  },
+  {
+    id: 5,
+    nombre: "SCIENTISTCALC",
+    descripcion:
+      "Una calculadora web intuitiva capaz de realizar operaciones básicas y científicas, incluyendo expresiones largas con historial visible. Su diseño responsivo y moderno mejora la experiencia del usuario, integrando scroll horizontal, redondeo de resultados y manejo de errores.",
+    tecnologias: ["HTML", "CSS", "REACT", "VITE", "TONE.JS", "GSAP", "I18NEXT", "FRAMER MOTION"],
+    imagen: ScientistCalc,
+    deploy: "https://scientifical.netlify.app/",
   },
 ];
 
