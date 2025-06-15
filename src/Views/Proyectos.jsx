@@ -8,6 +8,7 @@ import imh4nny_hub from "../assets/Imh4nny_hub.png";
 import portfolio from "../assets/Portfolio.png";
 import imh4nny_hupdate from "../assets/Imh4nny_hubUpdate.png";
 import ScientistCalc from "../assets/ScientistCalc.png";
+import Clocks from "../assets/Clocks.png";
 
 const proyectos = [
   {
