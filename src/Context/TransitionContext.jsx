@@ -1,5 +1,5 @@
-import React, { createContext } from 'react';
-import { useState } from 'react';
+import React, { createContext } from "react";
+import { useState } from "react";
 
 const TransitionContext = createContext({ completed: false });
 

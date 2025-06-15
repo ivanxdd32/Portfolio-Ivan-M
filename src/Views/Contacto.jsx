@@ -20,21 +20,33 @@ export default function Contacto() {
     };
 
     try {
-      const response = await fetch("https://portfolio-ivan-m-bc.onrender.com/send-email", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        "https://portfolio-ivan-m-bc.onrender.com/send-email",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        }
+      );
 
       if (response.ok) {
-        setMessageStatus({ type: "success", text: "Mensaje enviado con éxito ✅" });
+        setMessageStatus({
+          type: "success",
+          text: "Mensaje enviado con éxito ✅",
+        });
         formRef.current.reset();
       } else {
-        setMessageStatus({ type: "error", text: "Error al enviar el mensaje ❌" });
+        setMessageStatus({
+          type: "error",
+          text: "Error al enviar el mensaje ❌",
+        });
       }
     } catch (error) {
       console.error("Error:", error);
-      setMessageStatus({ type: "error", text: "Error en la conexión con el servidor ❌" });
+      setMessageStatus({
+        type: "error",
+        text: "Error en la conexión con el servidor ❌",
+      });
     } finally {
       setLoading(false);
 
@@ -72,7 +84,9 @@ export default function Contacto() {
         transition={{ duration: 0.5, delay: 0.8 }}
       >
         <div className="mb-4">
-          <label className="block text-left text-gray-400 font-bold pb-2">Nombre</label>
+          <label className="block text-left text-gray-400 font-bold pb-2">
+            Nombre
+          </label>
           <input
             type="text"
             name="user_name"
@@ -82,7 +96,9 @@ export default function Contacto() {
           />
         </div>
         <div className="mb-4">
-          <label className="block text-left text-gray-400 font-bold pb-2">Correo</label>
+          <label className="block text-left text-gray-400 font-bold pb-2">
+            Correo
+          </label>
           <input
             type="email"
             name="user_email"
@@ -92,7 +108,9 @@ export default function Contacto() {
           />
         </div>
         <div className="mb-4">
-          <label className="block text-left text-gray-400 font-bold pb-2">Mensaje</label>
+          <label className="block text-left text-gray-400 font-bold pb-2">
+            Mensaje
+          </label>
           <textarea
             name="message"
             rows="4"
@@ -106,7 +124,9 @@ export default function Contacto() {
         {messageStatus && (
           <motion.div
             className={`mb-3 p-2 text-sm font-semibold rounded-lg ${
-              messageStatus.type === "success" ? "bg-green-600 text-white" : "bg-red-600 text-white"
+              messageStatus.type === "success"
+                ? "bg-green-600 text-white"
+                : "bg-red-600 text-white"
             }`}
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -141,7 +161,7 @@ export default function Contacto() {
       >
         <FaLinkedin className="text-xl" /> Visita mi LinkedIn
       </motion.a>
-      
+
       {/* Botón de GitHub */}
       <motion.a
         href="https://github.com/ivanxdd32"

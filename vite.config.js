@@ -1,12 +1,12 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite'
-import { resolve } from 'path'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import tailwindcss from "@tailwindcss/vite";
+import { resolve } from "path";
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: "/", 
-  publicDir: "public",  // Asegura que Vite copie _redirects
+  base: "/",
+  publicDir: "public", // Asegura que Vite copie _redirects
   build: {
     outDir: "dist",
     assetsDir: "assets",
@@ -20,5 +20,5 @@ export default defineConfig({
     fs: {
       allow: ["public"], // Permitir acceso a la carpeta public
     },
-  }
-})
+  },
+});

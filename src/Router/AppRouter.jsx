@@ -1,11 +1,11 @@
-import React, { useContext } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import React, { useContext } from "react";
+import { Routes, Route } from "react-router-dom";
 
-import { TransitionProvider } from '../Context/TransitionContext';
-import TransitionComponent from '../Components/TransitionComponent';
-import Inicio from '../Views/Inicio';
-import Proyectos from '../Views/Proyectos';
-import Contacto from '../Views/Contacto';
+import { TransitionProvider } from "../Context/TransitionContext";
+import TransitionComponent from "../Components/TransitionComponent";
+import Inicio from "../Views/Inicio";
+import Proyectos from "../Views/Proyectos";
+import Contacto from "../Views/Contacto";
 
 const AppRouter = () => {
   return (

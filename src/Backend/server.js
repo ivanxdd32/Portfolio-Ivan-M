@@ -47,10 +47,14 @@ app.post("/send-email", emailLimiter, async (req, res) => {
     };
 
     await transporter.sendMail(mailOptions);
-    res.status(200).json({ success: true, message: "Correo enviado con éxito" });
+    res
+      .status(200)
+      .json({ success: true, message: "Correo enviado con éxito" });
   } catch (error) {
     console.error(error);
-    res.status(500).json({ success: false, message: "Error al enviar el correo" });
+    res
+      .status(500)
+      .json({ success: false, message: "Error al enviar el correo" });
   }
 });
 

@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 
 export default function Header() {
@@ -13,7 +13,9 @@ export default function Header() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h1 className="text-xl font-bold">Ivan<span className='text-blue-400'>.dev</span></h1>
+          <h1 className="text-xl font-bold">
+            Ivan<span className="text-blue-400">.dev</span>
+          </h1>
         </motion.div>
         <nav>
           <ul className="flex gap-4 text-xs sm:text-base md:pr-5">
