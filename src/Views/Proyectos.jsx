@@ -88,6 +88,21 @@ const proyectos = [
     imagen: ScientistCalc,
     deploy: "https://scientifical.netlify.app/",
   },
+  {
+    id: 6,
+    nombre: "CLOCKS - INTERNATIONAL TIMEZONES",
+    descripcion:
+      "Una aplicación web que muestra la hora actual en distintas zonas del mundo, con un diseño dinámico, animaciones suaves y opción de modo claro/oscuro. Permite al usuario seleccionar regiones, personalizar la visualización y disfrutar de un fondo interactivo y animado.",
+    tecnologias: [
+      "HTML",
+      "CSS",
+      "REACT",
+      "VITE",
+      "FRAMER MOTION",
+    ],
+    imagen: Clocks,
+    deploy: "https://clocks-international-timezones.netlify.app/",
+  },
 ];
 
 const textoAnimado = "Mis Proyectos";
