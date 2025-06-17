@@ -98,7 +98,6 @@ npm start
 ## 📌 Mejoras Futuras
 
 - 🌈 Rediseño con animaciones más creativas.
-- 🔐 Autenticación para acceso privado.
 - ✍️ Sección de blog para artículos técnicos.
 - 🛠️ Panel para gestión de proyectos dinámicamente.
 
