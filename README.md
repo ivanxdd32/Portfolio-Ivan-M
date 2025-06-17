@@ -4,7 +4,7 @@
     <img src="https://img.shields.io/badge/Portfolio-Iván-blueviolet?style=for-the-badge&logo=react" alt="Portfolio Ivan" />
   </a>
   <h1>🌐 Portafolio Web Personal</h1>
-  <p>Explora mis proyectos, habilidades y cómo me puedes contactar. Un sitio moderno y funcional hecho con ❤️ por Iván.</p>
+  <p>Explora mis proyectos, habilidades y cómo me puedes contactar. Un sitio moderno y funcional hecho con ❤️</p>
 </div>
 
 ---
