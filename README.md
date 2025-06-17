@@ -34,9 +34,20 @@
 
 ```
 📦 Portfolio-Ivan-M
-├── 📂 frontend     # Proyecto en React + Vite + Tailwind
-├── 📂 backend      # Servidor Express con Nodemailer
-└── README.md       # Este archivo
+├── 📂 public # Archivos estáticos públicos
+├── 📂 src
+│ ├── 📂 assets # Recursos gráficos y multimedia
+│ ├── 📂 backend # API en Express con Nodemailer
+│ ├── 📂 components # Componentes reutilizables de React
+│ ├── 📂 context # Contextos globales de React
+│ ├── 📂 router # Ruteo de vistas con React Router
+│ ├── 📂 views # Vistas principales del sitio
+│ ├── app.jsx # Componente raíz
+│ ├── main.jsx # Punto de entrada de la app
+│ ├── main.css / main.css # Estilos generales
+├── vite.config.js
+├── index.html
+└── README.md
 ```
 
 - **Frontend**: App SPA con secciones de inicio, proyectos, contacto, animaciones suaves y diseño responsivo.
