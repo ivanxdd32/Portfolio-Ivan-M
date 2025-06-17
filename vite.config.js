@@ -18,7 +18,7 @@ export default defineConfig({
   },
   server: {
     fs: {
-      allow: ["public"], // Permitir acceso a la carpeta public
+      allow: ["public", "."], // Permitir acceso a la carpeta public
     },
   },
 });
