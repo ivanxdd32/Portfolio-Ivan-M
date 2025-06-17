@@ -1,116 +1,113 @@
-# Mi portafolio web
 
-Este es mi **portafolio web personal**, donde se presentan mis proyectos y habilidades en desarrollo web. El proyecto está construido con **React** en el frontend y un **backend en Node.js** para el manejo de formularios de contacto y otras funcionalidades.
+<div align="center">
+  <img src="https://img.shields.io/badge/Portfolio-Iván-blueviolet?style=for-the-badge&logo=react" alt="Portfolio Ivan" />
+  <h1>🌐 Portafolio Web Personal</h1>
+  <p>Explora mis proyectos, habilidades y cómo me puedes contactar. Un sitio moderno y funcional hecho con ❤️ por Iván.</p>
+</div>
 
-## Tecnologías utilizadas
+---
 
-### Frontend:
+## 🚀 Tecnologías Utilizadas
 
-- **React**: Biblioteca de JavaScript para construir interfaces de usuario.
-- **Vite**: Herramienta de construcción y desarrollo rápido para proyectos de React.
-- **TailwindCSS**: Framework de CSS para el diseño rápido y responsivo.
-- **JSX/HTML**: Lenguajes utilizados para estructurar el contenido de la página.
+### 🎨 Frontend
+- **React** ⚛️ – Biblioteca para crear interfaces de usuario dinámicas.
+- **Vite** ⚡ – Compilador ultrarrápido para desarrollo moderno.
+- **TailwindCSS** 💨 – Framework CSS para diseño rápido y responsive.
+- **Framer Motion** 🎬 – Librería de animaciones para React.
+- **Animate.css** ✨ – Animaciones listas para usar.
 
-### Backend:
+### 🔧 Backend
+- **Node.js** 🟢 – Entorno de ejecución de JavaScript para el backend.
+- **Express** 🚂 – Framework minimalista para servidores.
+- **Nodemailer** 📬 – Envío de correos electrónicos.
+- **dotenv** 🔐 – Manejo seguro de variables de entorno.
+- **CORS** 🌐 – Permite comunicación entre dominios.
 
-- **Node.js**: Plataforma de JavaScript para el backend.
-- **Express**: Framework de Node.js para crear la API REST.
-- **Nodemailer**: Librería para el envío de correos electrónicos desde el servidor.
-- **CORS**: Middleware para permitir peticiones entre diferentes dominios.
-- **dotenv**: Para manejar variables de entorno de manera segura.
+### ☁️ Hosting
+- **Render** – Despliegue del backend y frontend con facilidad.
 
-### Otros:
+---
 
-- **Render**: Plataforma para desplegar el backend y el frontend de manera sencilla.
+## 📁 Estructura del Proyecto
 
-## Estructura de la aplicación
+```
+📦 Portfolio-Ivan-M
+├── 📂 frontend     # Proyecto en React + Vite + Tailwind
+├── 📂 backend      # Servidor Express con Nodemailer
+└── README.md       # Este archivo
+```
 
-El proyecto está dividido en dos partes:
+- **Frontend**: App SPA con secciones de inicio, proyectos, contacto, animaciones suaves y diseño responsivo.
+- **Backend**: API para envío de correos con protección contra spam y límites por tiempo.
 
-### 1. **Frontend**:
+---
 
-- El frontend está desarrollado en **React** y se sirve como una aplicación estática a través de **Render**.
-- Rutas importantes:
-  - **/inicio (Raíz)**: Página principal que muestra una bienvenida y mis habilidades.
-  - **/proyectos**: Página que muestra mis proyectos personales, con animaciones al cargar los elementos.
-  - **/contacto**: Página con un formulario de contacto para enviar correos electrónicos directamente desde el sitio.
+## 🛠️ Instalación Local
 
-### 2. **Backend**:
+1. Clonar repositorio:
 
-- El backend está construido con **Node.js** y **Express** y se encarga de manejar las solicitudes de contacto y enviar correos electrónicos.
-- Rutas importantes:
-  - **/send-email (POST)**: Ruta para manejar los envíos de correo electrónico desde el formulario de contacto.
-  - **/**: Ruta base para verificar que el servidor está en funcionamiento.
+```bash
+git clone https://github.com/ivanxdd32/Portfolio-Ivan-M.git
+```
 
-## Instrucciones para la instalación y ejecución
+2. Instalar y correr el **Frontend**:
 
-1. Clona el repositorio:
+```bash
+cd Portfolio-Ivan-M/frontend
+npm install
+npm run dev
+```
 
-   ```bash
-   git clone https://github.com/ivanxdd32/Portfolio-Ivan-M.git
+> Accede a `http://localhost:3000`
 
-   ```
+3. Instalar y correr el **Backend**:
 
-2. **Frontend**:
+```bash
+cd ../backend
+npm install
+```
 
-   - Instala las dependencias:
+Crea un archivo `.env` y asegúrate de que esté listado en `.gitignore`:
 
-     ```bash
-     npm install
-     ```
+```env
+EMAIL_USER=tu_correo@ejemplo.com
+EMAIL_PASS=una_contraseña_segura_generada_por_app
+```
 
-   - Ejecuta el servidor de desarrollo:
+> ⚠️ **Importante**: Nunca subas el archivo `.env` a GitHub.
 
-     ```bash
-     npm run dev
-     ```
+Inicia el servidor:
 
-   - El frontend debería estar corriendo en `http://localhost:3000`.
+```bash
+npm start
+```
 
-3. **Backend**:
+> El backend estará corriendo en `http://localhost:5000` y cuenta con protección contra abuso mediante limitaciones por IP o tiempo.
 
-   - Navega a la carpeta del backend:
+---
 
-     ```bash
-     cd backend
-     ```
+## 🌍 Despliegue
 
-   - Instala las dependencias:
+- **Frontend Render**: [Render](https://portfolio-ivan-m.onrender.com)
+- **Backend Render**: [Render](https://portfolio-ivan-m-bc.onrender.com)
 
-     ```bash
-     npm install
-     ```
+---
 
-   - Crea un archivo `.env` y agrega tus credenciales para el correo electrónico:
+## 📌 Mejoras Futuras
 
-     ```env
-     EMAIL_USER=tu_email@gmail.com
-     EMAIL_PASS=tu_contraseña_de_email
-     ```
+- 🌈 Rediseño con animaciones más creativas.
+- 🔐 Autenticación para acceso privado.
+- ✍️ Sección de blog para artículos técnicos.
+- 🛠️ Panel para gestión de proyectos dinámicamente.
 
-   - Ejecuta el servidor de backend:
+---
 
-     ```bash
-     npm start
-     ```
+## 📬 Contacto
 
-   - El backend estará corriendo en `http://localhost:5000`.
+¿Te interesa trabajar conmigo? Ve a la sección de **Contacto** en el sitio o mándame un mensaje directamente desde el portafolio.
 
-4. Para desplegar ambos, puedes usar **Render**. El frontend es un **Static Site**, mientras que el backend es una **API** de **Node.js**.
+---
 
-## Despliegue
+## ⚖️ Licencia
 
-1. **Frontend**: El frontend está desplegado en [Render](https://portfolio-ivan-m.onrender.com), donde se sirve como una aplicación estática.
-
-2. **Backend**: El backend está desplegado en [Render](https://portfolio-ivan-m-bc.onrender.com), y maneja las solicitudes de contacto enviadas desde el frontend.
-
-## Mejoras futuras
-
-- Agregar más interactividad a los proyectos.
-- Incluir un sistema de autenticación y autorización.
-- Mejorar la interfaz de usuario con animaciones y transiciones más complejas.
-- Agregar un blog o sección de publicaciones.
-
-## Licencia
-
-Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
+Distribuido bajo la licencia MIT. Ver [LICENSE](LICENSE) para más información.
