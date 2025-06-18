@@ -96,7 +96,7 @@ export default function Inicio() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}
             >
-              ¡Hola, soy{" "}
+              ¡Hola, Soy{" "}
               <span className="text-blue-400 lg:text-blue-600">
                 Ivan Martinez!
               </span>
@@ -109,7 +109,7 @@ export default function Inicio() {
               transition={{ duration: 0.5, delay: 0.7 }}
             >
               Desarrollador apasionado por la tecnología, ciberseguridad y el
-              desarrollo web.
+              desarrollo de software.
             </motion.p>
 
             {/* Fondo negro en la esquina inferior derecha */}
