@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
@@ -104,8 +104,8 @@ export default function Inicio() {
 
             <motion.p
               className="mt-4 text-md text-gray-300 sm:text-xl lg:text-gray-800 lg:pl-1"
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.7 }}
             >
               Desarrollador apasionado por la tecnología, ciberseguridad y el
@@ -151,9 +151,6 @@ export default function Inicio() {
                 nextSectionRef.current?.scrollIntoView({ behavior: "smooth" })
               }
             >
-              <p className="text-gray-400 text-sm mb-2 lg:text-gray-800">
-                Ver más
-              </p>
               <FaChevronDown className="text-3xl" />
             </motion.div>
           </div>

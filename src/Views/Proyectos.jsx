@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import "animate.css"; // Asegura que Animate.css esté importado
+import "animate.css";
 
 // Imágenes de proyectos
 import tareku from "../assets/Tareku.png";
@@ -158,7 +158,7 @@ export default function Proyectos() {
     setTimeout(() => {
       setProyectoActivo(proyecto);
       setAnimando(false);
-    }, 0); // Espera 800ms antes de cambiar el estado
+    }, 0); // Espera antes de cambiar el estado
   };
 
   const letterVariants = {
@@ -204,7 +204,7 @@ export default function Proyectos() {
               ${
                 animandoEntrada ? "animate__animated animate__bounceInUp" : ""
               }`}
-            style={{ animationDelay: `${index * 0.2}s` }}
+            style={{ animationDelay: `${index * 0.1}s` }}
             onClick={() => handleProyectoClick(proyecto)}
             initial={false}
             animate={{
