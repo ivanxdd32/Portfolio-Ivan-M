@@ -66,19 +66,12 @@ git clone https://github.com/ivanxdd32/Portfolio-Ivan-M.git
 2. Instalar y correr el **Frontend**:
 
 ```bash
-cd Portfolio-Ivan-M/frontend
+cd Portfolio-Ivan-M
 npm install
 npm run dev
 ```
 
-> Accede a `http://localhost:3000`
-
-3. Instalar y correr el **Backend**:
-
-```bash
-cd ../backend
-npm install
-```
+> Accede a la URL local que aparece en la consola, usualmente algo como `http://localhost:5173/`
 
 Crea un archivo `.env` y asegúrate de que esté listado en `.gitignore`:
 
