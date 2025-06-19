@@ -3,39 +3,38 @@ import { useCallback } from "react";
 import Particles from "react-tsparticles";
 import { loadFireworksPreset } from "tsparticles-preset-fireworks";
 
-export default function ExplosionParticles({ onComplete }) {
+export default function ExplosionParticles() {
   const particlesInit = useCallback(async (engine) => {
     await loadFireworksPreset(engine);
   }, []);
 
   return (
-    <Particles
-      id="tsparticles"
-      init={particlesInit}
-      options={{
-        preset: "fireworks",
-        fullScreen: {
-          enable: true,
-          zIndex: 1000,
-        },
-        detectRetina: true,
-        emitters: {
-          life: {
-            duration: 0.5,
-            count: 1,
+    <div style={{ position: "absolute", inset: 0, pointerEvents: "none" }}>
+      <Particles
+        id="explosion"
+        init={particlesInit}
+        options={{
+          preset: "fireworks",
+          detectRetina: true,
+          fullScreen: {
+            enable: false, // 🚫 no fullscreen
           },
-          rate: {
-            quantity: 20,
-            delay: 0.1,
+          emitters: {
+            life: {
+              duration: 0.5,
+              count: 1,
+            },
+            rate: {
+              quantity: 15, // menos partículas
+              delay: 0.1,
+            },
+            position: {
+              x: 50,
+              y: 50,
+            },
           },
-          position: {
-            x: 50,
-            y: 50,
-          },
-        },
-      }}
-      style={{ position: "absolute" }}
-      className="pointer-events-none"
-    />
+        }}
+      />
+    </div>
   );
 }

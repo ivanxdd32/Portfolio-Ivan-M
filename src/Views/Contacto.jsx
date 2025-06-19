@@ -89,10 +89,15 @@ export default function Contacto() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
           >
+            {showParticles && (
+              <div className="absolute inset-0 z-10">
+                <ExplosionParticles />
+              </div>
+            )}
             <form
               ref={formRef}
               onSubmit={sendEmail}
-              className="bg-gray-800 p-6 rounded-lg shadow-lg border border-blue-500/30"
+              className="relative bg-gray-800 p-6 rounded-lg shadow-lg border border-blue-500/30"
             >
               <div className="mb-4">
                 <label className="block text-left text-gray-300 font-bold pb-2">
