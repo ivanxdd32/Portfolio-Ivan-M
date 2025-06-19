@@ -86,7 +86,7 @@ export default function Contacto() {
           <form
             ref={formRef}
             onSubmit={sendEmail}
-            className="bg-gray-800 p-6 rounded-lg shadow-lg border border-blue-500/30"
+            className="bg-gray-800 p-6 rounded-lg shadow-lg border border-blue-900/50"
           >
             <div className="mb-4">
               <label className="block text-left text-gray-300 font-bold pb-2">

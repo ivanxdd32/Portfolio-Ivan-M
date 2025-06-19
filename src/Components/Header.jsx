@@ -34,7 +34,7 @@ export default function Header() {
               return (
                 <li
                   key={path}
-                  className="relative group overflow-hidden rounded-lg"
+                  className="relative group overflow-hidden rounded-md"
                   onClick={() => {
                     setClickedLink(path);
                     setTimeout(() => setClickedLink(null), 400);

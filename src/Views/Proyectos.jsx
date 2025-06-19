@@ -94,13 +94,7 @@ const proyectos = [
     nombre: "CLOCKS - INTERNATIONAL TIMEZONES",
     descripcion:
       "Una aplicación web que muestra la hora actual en distintas zonas del mundo, con un diseño dinámico, animaciones suaves y opción de modo claro/oscuro. Permite al usuario seleccionar regiones, personalizar la visualización y disfrutar de un fondo interactivo y animado.",
-    tecnologias: [
-      "HTML",
-      "CSS",
-      "REACT",
-      "VITE",
-      "FRAMER MOTION",
-    ],
+    tecnologias: ["HTML", "CSS", "REACT", "VITE", "FRAMER MOTION"],
     imagen: Clocks,
     deploy: "https://clocks-international-timezones.netlify.app/",
   },
@@ -175,8 +169,8 @@ export default function Proyectos() {
   };
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center text-center bg-gray-900 text-white py-20 px-4 overflow-hidden">
-      <motion.h2 className="text-3xl font-bold text-center pt-4 pb-10">
+    <section className="min-h-screen flex flex-col items-center justify-center text-center bg-gray-900 text-white py-12 px-4 overflow-hidden">
+      <motion.h2 className="text-2xl font-bold text-center pt-4 pb-8 mt-4">
         {textoAnimado.split("").map((letra, i) => (
           <motion.span
             key={i}
@@ -191,19 +185,17 @@ export default function Proyectos() {
         ))}
       </motion.h2>
 
-      {/* Proyectos siempre renderizados */}
+      {/* Proyectos */}
       <div
-        className={`grid grid-cols-1 lg:grid-cols-3 gap-6 px-4 sm:px-8 md:px-12 lg:px-20 cursor-pointer 
-        ${proyectoActivo ? "opacity-0 pointer-events-none" : "opacity-100"} 
-        transition-opacity duration-500`}
+        className={`grid grid-cols-1 lg:grid-cols-3 gap-5 px-4 sm:px-6 md:px-10 lg:px-16 cursor-pointer 
+      ${proyectoActivo ? "opacity-0 pointer-events-none" : "opacity-100"} 
+      transition-opacity duration-500`}
       >
         {proyectos.map((proyecto, index) => (
           <motion.div
             key={proyecto.id}
-            className={`bg-gray-800 p-4 rounded-lg shadow-lg overflow-hidden 
-              ${
-                animandoEntrada ? "animate__animated animate__bounceInUp" : ""
-              }`}
+            className={`bg-gray-800 p-3 rounded-lg shadow-lg overflow-hidden 
+            ${animandoEntrada ? "animate__animated animate__bounceInUp" : ""}`}
             style={{ animationDelay: `${index * 0.1}s` }}
             onClick={() => handleProyectoClick(proyecto)}
             initial={false}
@@ -212,14 +204,14 @@ export default function Proyectos() {
               scale: animarSalida ? 0.9 : 1,
             }}
             transition={{ duration: 0.2 }}
-            whileHover={{ scale: 1.05 }} // Agregamos el efecto hover
+            whileHover={{ scale: 1.05 }}
           >
             <img
               src={proyecto.imagen}
               alt={proyecto.nombre}
-              className="w-full h-48 object-cover rounded-md"
+              className="w-full h-36 object-cover rounded-md"
             />
-            <h3 className="text-xl font-semibold mt-2">{proyecto.nombre}</h3>
+            <h3 className="text-lg font-semibold mt-2">{proyecto.nombre}</h3>
           </motion.div>
         ))}
       </div>
@@ -231,7 +223,9 @@ export default function Proyectos() {
             animandoSalida
               ? "animate__animated animate__fadeOutUpBig"
               : "animate__animated animate__zoomInUp"
-          }`}
+          }
+          overflow-hidden`}
+          style={{ overflowY: "hidden" }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -239,11 +233,14 @@ export default function Proyectos() {
         >
           <div
             className="absolute inset-0 w-full h-full bg-cover bg-center blur-sm"
-            style={{ backgroundImage: `url(${proyectoActivo.imagen})` }}
+            style={{
+              backgroundImage: `url(${proyectoActivo.imagen})`,
+              overflowY: "hidden",
+            }}
           ></div>
 
           <motion.button
-            className="absolute top-18 right-6 sm:top-18 md:top-20 lg:top-20 lg:right-4 w-12 h-12 flex items-center z-1 cursor-pointer justify-center text-white text-2xl font-bold bg-gray-800 border border-gray-700 rounded-full shadow-lg hover:bg-gray-600 transition-all duration-300 animate__animated animate__backInRight"
+            className="absolute top-18 right-6 sm:top-18 md:top-20 lg:top-20 lg:right-4 w-12 h-12 flex items-center z-10 cursor-pointer justify-center text-white text-2xl font-bold bg-gray-800 border border-gray-700 rounded-full shadow-lg hover:bg-gray-600 transition-all duration-300 animate__animated animate__backInRight"
             onClick={cerrarProyecto}
             style={{ animationDelay: "0.5s" }}
             whileHover={{ scale: 1.1 }}
