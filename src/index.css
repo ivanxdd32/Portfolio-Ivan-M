@@ -4,3 +4,22 @@ body {
   margin: 0;
   padding: 0;
 }
+
+@keyframes border-glow {
+  0% {
+    border-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 0px rgba(0, 0, 0, 0.2);
+  }
+  50% {
+    border-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.35);
+  }
+  100% {
+    border-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 0px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.animate-border-glow {
+  animation: border-glow 3s ease-in-out infinite;
+}

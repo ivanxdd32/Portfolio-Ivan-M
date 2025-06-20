@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { FaLinkedin, FaGithub, FaPaperPlane } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
+
 
 export default function Contacto() {
   const formRef = useRef(null);

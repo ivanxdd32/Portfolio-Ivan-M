@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { motion } from "framer-motion";
+import SkillCard from "../Components/SkillCard";
 import {
   FaReact,
   FaNodeJs,
@@ -160,15 +161,24 @@ export default function Inicio() {
       {/* TECNOLOGÍAS */}
       <section
         ref={nextSectionRef}
-        className="h-auto py-20 px-6 md:px-12 flex flex-col items-center justify-center bg-gray-900"
+        className="py-28 px-6 md:px-12 bg-gradient-to-b from-gray-900 via-gray-950 to-black text-white"
       >
-        <div className="w-full max-w-5xl flex flex-col lg:flex-row lg:justify-between gap-8">
+        <motion.h2
+          className="text-4xl font-extrabold text-center mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          Tecnologías y herramientas que domino
+        </motion.h2>
+
+        <div className="flex flex-col lg:flex-row gap-12 justify-center items-stretch max-w-6xl mx-auto">
           {/* Lenguajes de Programación */}
           <SectionCard
             title="Lenguajes de Programación"
             color="text-yellow-400"
           >
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:flex lg:flex-col lg:gap-4">
+            <div className="grid grid-cols-2 gap-4">
               <SkillCard
                 icon={<SiJavascript />}
                 label="JavaScript"
@@ -198,7 +208,7 @@ export default function Inicio() {
 
           {/* Frameworks y Librerías */}
           <SectionCard title="Frameworks y Librerías" color="text-blue-400">
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:flex lg:flex-col lg:gap-4">
+            <div className="grid grid-cols-2 gap-4">
               <SkillCard
                 icon={<FaReact />}
                 label="React"
@@ -207,7 +217,7 @@ export default function Inicio() {
               />
               <SkillCard
                 icon={<SiTailwindcss />}
-                label="Tailwind CSS"
+                label="TailwindCSS"
                 color="text-teal-400"
                 url="https://tailwindcss.com/docs"
               />
@@ -228,7 +238,7 @@ export default function Inicio() {
 
           {/* Herramientas y Entornos */}
           <SectionCard title="Herramientas y Entornos" color="text-green-400">
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:flex lg:flex-col lg:gap-4">
+            <div className="grid grid-cols-2 gap-4">
               <SkillCard
                 icon={<FaGitAlt />}
                 label="Git"
@@ -268,16 +278,3 @@ const SectionCard = ({ title, children, color }) => (
   </motion.div>
 );
 
-// Componente de Tarjeta de Habilidad
-const SkillCard = ({ icon, label, color, url }) => (
-  <motion.div
-    className={`flex flex-col items-center p-4 rounded-lg cursor:pointer shadow-md bg-gray-700 ${color} hover:scale-110 hover:shadow-lg transition-transform md:mx-4 m-2`}
-    initial={{ scale: 0.8, opacity: 0 }}
-    whileInView={{ scale: 1, opacity: 1 }}
-    transition={{ duration: 0.5 }}
-    onClick={() => window.open(url, "_blank")}
-  >
-    <div className="text-5xl mb-2">{icon}</div>
-    <span className="text-lg">{label}</span>
-  </motion.div>
-);
