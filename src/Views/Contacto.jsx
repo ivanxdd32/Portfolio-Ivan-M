@@ -1,12 +1,17 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { FaLinkedin, FaGithub, FaPaperPlane } from "react-icons/fa";
-
+import gsap from "gsap";
+import { Physics2DPlugin } from "gsap/Physics2DPlugin";
 
 export default function Contacto() {
   const formRef = useRef(null);
   const [loading, setLoading] = useState(false);
   const [messageStatus, setMessageStatus] = useState(null);
+  gsap.registerPlugin(Physics2DPlugin);
+
+  //Guarda el valor anterior del scroll para la animacion de confetti (evita desbordamiento por spam(improbable))
+  const prevOverflow = document.body.style.overflow;
 
   const sendEmail = async (e) => {
     e.preventDefault();
@@ -34,6 +39,18 @@ export default function Contacto() {
           text: "Mensaje enviado con éxito ✅",
         });
         formRef.current.reset();
+
+        document.body.style.overflow = "hidden";
+
+        //Lanzar Confetti
+        const rect = e.target.getBoundingClientRect();
+        const x = rect.left + rect.width / 2;
+        const y = rect.top + rect.height / 2;
+        launchConfetti(x, y);
+        //Habilito el scroll al finalizar la animacion
+        setTimeout(() => {
+          document.body.style.overflow = prevOverflow;
+        }, 3000);
       } else {
         setMessageStatus({
           type: "error",
@@ -49,6 +66,56 @@ export default function Contacto() {
     } finally {
       setLoading(false);
       setTimeout(() => setMessageStatus(null), 4000);
+    }
+  };
+
+  //Confetti
+  const launchConfetti = (x, y) => {
+    const dotCount = gsap.utils.random(300, 30, 1);
+    const colors = ["#0ae448", "#abff84", "#fffce1"];
+
+    for (let i = 0; i < dotCount; i++) {
+      const dot = document.createElement("div");
+      dot.classList.add("confetti-dot");
+
+      document.body.appendChild(dot);
+
+      gsap.set(dot, {
+        backgroundColor: gsap.utils.random(colors),
+        top: y,
+        left: x,
+        position: "absolute",
+        width: "8px",
+        height: "8px",
+        borderRadius: "50%",
+        pointerEvents: "none",
+        zIndex: 9999,
+        scale: 0,
+      });
+
+      gsap
+        .timeline({
+          onComplete: () => dot.remove(),
+        })
+        .to(dot, {
+          scale: gsap.utils.random(0.5, 1),
+          duration: 0.3,
+          ease: "power3.out",
+        })
+        .to(
+          dot,
+          {
+            duration: 2,
+            physics2D: {
+              velocity: gsap.utils.random(300, 800),
+              angle: gsap.utils.random(0, 360),
+              gravity: 1200,
+            },
+            autoAlpha: 0,
+            ease: "none",
+          },
+          "<"
+        );
     }
   };
 
