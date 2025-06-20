@@ -4,20 +4,6 @@ import { useRef } from "react";
 const SkillCard = ({ icon, label, color, url }) => {
   const cardRef = useRef(null);
 
-  const handleMouseMove = (e) => {
-    const rect = cardRef.current.getBoundingClientRect();
-    const x = (e.clientX - rect.left) / rect.width - 0.5;
-    const y = (e.clientY - rect.top) / rect.height - 0.5;
-
-    cardRef.current.style.transform = `rotateY(${x * 10}deg) rotateX(${
-      y * -10
-    }deg)`;
-  };
-
-  const resetTilt = () => {
-    cardRef.current.style.transform = "rotateY(0deg) rotateX(0deg)";
-  };
-
   return (
     <motion.div
       ref={cardRef}
@@ -38,7 +24,7 @@ const SkillCard = ({ icon, label, color, url }) => {
         <div className="text-5xl mb-2 transition-transform duration-300 group-hover:scale-110">
           {icon}
         </div>
-        <span className="text-lg font-semibold text-white">{label}</span>
+        <span className={`text-lg font-semibold ${color}`}>{label}</span>
       </div>
     </motion.div>
   );
