@@ -34,5 +34,22 @@
     "clocks-international-timezones": {
       "description": "A web application that displays the current time across different regions of the world, with a dynamic design, smooth animations, and a light/dark mode toggle. Users can select regions, customize the view, and enjoy an interactive animated background."
     }
+  },
+  "contact": {
+    "title": "Contact Me",
+    "description": "Send me a message and I’ll reply as soon as possible.",
+    "nameLabel": "Name",
+    "placeholderName": "Your Name",
+    "emailLabel": "Email",
+    "placeholderEmail": "Your Email",
+    "messageLabel": "Message",
+    "placeholderMessage": "Write your message here...",
+    "send": "Send",
+    "sending": "Sending...",
+    "success": "Message sent successfully ✅",
+    "error": "Failed to send the message ❌",
+    "serverError": "Server connection error ❌",
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
   }
 }

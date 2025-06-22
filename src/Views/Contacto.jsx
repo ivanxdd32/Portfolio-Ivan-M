@@ -1,6 +1,7 @@
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { FaLinkedin, FaGithub, FaPaperPlane } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 import gsap from "gsap";
 import { Physics2DPlugin } from "gsap/Physics2DPlugin";
 
@@ -8,6 +9,7 @@ export default function Contacto() {
   const formRef = useRef(null);
   const [loading, setLoading] = useState(false);
   const [messageStatus, setMessageStatus] = useState(null);
+  const { t } = useTranslation();
   gsap.registerPlugin(Physics2DPlugin);
 
   //Guarda el valor anterior del scroll para la animacion de confetti (evita desbordamiento por spam(improbable))
@@ -36,7 +38,7 @@ export default function Contacto() {
       if (response.ok) {
         setMessageStatus({
           type: "success",
-          text: "Mensaje enviado con éxito ✅",
+          text: t("contact.success"),
         });
         formRef.current.reset();
 
@@ -47,21 +49,21 @@ export default function Contacto() {
         const x = rect.left + rect.width / 2;
         const y = rect.top + rect.height / 2;
         launchConfetti(x, y);
-        //Habilito el scroll al finalizar la animacion
+
         setTimeout(() => {
           document.body.style.overflow = prevOverflow;
         }, 3000);
       } else {
         setMessageStatus({
           type: "error",
-          text: "Error al enviar el mensaje ❌",
+          text: t("contact.error"),
         });
       }
     } catch (error) {
       console.error("Error:", error);
       setMessageStatus({
         type: "error",
-        text: "Error en la conexión con el servidor ❌",
+        text: t("contact.serverError"),
       });
     } finally {
       setLoading(false);
@@ -124,7 +126,7 @@ export default function Contacto() {
       <div className="w-full max-w-6xl flex flex-col lg:flex-row gap-12">
         {/* Izquierda: texto + icono */}
         <motion.div
-          className="flex-1 flex flex-col justify-center items-center text-center lg:text-left"
+          className="flex-1 flex flex-col justify-center items-center text-center"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7 }}
@@ -136,10 +138,10 @@ export default function Contacto() {
             transition={{ duration: 0.5, delay: 0.5 }}
           >
             <FaPaperPlane className="text-blue-400 text-3xl" />
-            Contáctame
+            {t("contact.title")}
           </motion.h2>
           <p className="text-gray-400 mb-4 mt-4 max-w-md">
-            Envíame un mensaje y te responderé lo antes posible.
+            {t("contact.description")}
           </p>
         </motion.div>
 
@@ -157,36 +159,36 @@ export default function Contacto() {
           >
             <div className="mb-4">
               <label className="block text-left text-gray-300 font-bold pb-2">
-                Nombre
+                {t("contact.nameLabel")}
               </label>
               <input
                 type="text"
                 name="user_name"
-                placeholder="Tu Nombre"
+                placeholder={t("contact.placeholderName")}
                 required
                 className="w-full p-2 rounded bg-gray-700 text-white placeholder-gray-400 outline-none focus:ring-2 focus:ring-blue-400"
               />
             </div>
             <div className="mb-4">
               <label className="block text-left text-gray-300 font-bold pb-2">
-                Correo
+                {t("contact.emailLabel")}
               </label>
               <input
                 type="email"
                 name="user_email"
-                placeholder="Tu Correo"
+                placeholder={t("contact.placeholderEmail")}
                 required
                 className="w-full p-2 rounded bg-gray-700 text-white placeholder-gray-400 outline-none focus:ring-2 focus:ring-blue-400"
               />
             </div>
             <div className="mb-4">
               <label className="block text-left text-gray-300 font-bold pb-2">
-                Mensaje
+                {t("contact.messageLabel")}
               </label>
               <textarea
                 name="message"
                 rows="4"
-                placeholder="Escribe tu mensaje aquí..."
+                placeholder={t("contact.placeholderMessage")}
                 required
                 className="w-full p-2 rounded bg-gray-700 text-white placeholder-gray-400 outline-none focus:ring-2 focus:ring-blue-400"
               ></textarea>
@@ -207,6 +209,7 @@ export default function Contacto() {
                 {messageStatus.text}
               </motion.div>
             )}
+
             <motion.button
               type="submit"
               disabled={loading}
@@ -218,10 +221,9 @@ export default function Contacto() {
             >
               {/* Efecto de luz que pasa por encima */}
               <span className="absolute inset-0 bg-white opacity-10 blur-sm transform -translate-x-full hover:translate-x-full transition-transform duration-700" />
-
               {loading ? (
                 <span className="flex items-center gap-2">
-                  Enviando...
+                  {t("contact.sending")}
                   <motion.span
                     className="animate-spin"
                     initial={{ rotate: 0 }}
@@ -237,7 +239,7 @@ export default function Contacto() {
                 </span>
               ) : (
                 <span className="flex items-center gap-2">
-                  Enviar
+                  {t("contact.send")}
                   <motion.span
                     whileHover={{ x: 3 }}
                     transition={{ type: "spring", stiffness: 300 }}
@@ -255,7 +257,7 @@ export default function Contacto() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700 transition"
               >
-                <FaLinkedin className="text-xl" /> LinkedIn
+                <FaLinkedin className="text-xl" /> {t("contact.linkedin")}
               </a>
               <a
                 href="https://github.com/ivanxdd32"
@@ -263,7 +265,7 @@ export default function Contacto() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 bg-gray-800 px-4 py-2 rounded-lg hover:bg-gray-700 transition"
               >
-                <FaGithub className="text-xl" /> GitHub
+                <FaGithub className="text-xl" /> {t("contact.github")}
               </a>
             </div>
           </form>

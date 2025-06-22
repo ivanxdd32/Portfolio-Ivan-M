@@ -34,5 +34,22 @@
     "clocks-international-timezones": {
       "description": "Une application web affichant l’heure actuelle dans différentes régions du monde, avec un design dynamique, des animations douces et une option de mode clair/sombre. Elle permet aux utilisateurs de sélectionner des régions, personnaliser l’affichage et profiter d’un fond interactif et animé."
     }
+  },
+  "contact": {
+    "title": "Contactez-moi",
+    "description": "Envoyez-moi un message et je vous répondrai dès que possible.",
+    "nameLabel": "Nom",
+    "placeholderName": "Votre nom",
+    "emailLabel": "Email",
+    "placeholderEmail": "Votre email",
+    "messageLabel": "Message",
+    "placeholderMessage": "Écrivez votre message ici...",
+    "send": "Envoyer",
+    "sending": "Envoi...",
+    "success": "Message envoyé avec succès ✅",
+    "error": "Échec de l’envoi du message ❌",
+    "serverError": "Erreur de connexion au serveur ❌",
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
   }
 }
