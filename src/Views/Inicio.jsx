@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { motion } from "framer-motion";
 import SkillCard from "../Components/SkillCard";
+import { useTranslation } from "react-i18next";
 import {
   FaReact,
   FaNodeJs,
@@ -28,6 +29,7 @@ export default function Inicio() {
   const sectionRef = useRef(null);
   const nextSectionRef = useRef(null);
   const [showArrow, setShowArrow] = useState(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -97,7 +99,7 @@ export default function Inicio() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}
             >
-              ¡Hola, Soy{" "}
+              {t("home.greeting")}{" "}
               <span className="text-blue-400 lg:text-blue-600">
                 Ivan Martinez!
               </span>
@@ -109,8 +111,7 @@ export default function Inicio() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.7 }}
             >
-              Desarrollador apasionado por la tecnología, ciberseguridad y el
-              desarrollo de software.
+              {t("home.description")}
             </motion.p>
 
             {/* Fondo negro en la esquina inferior derecha */}
@@ -169,13 +170,13 @@ export default function Inicio() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          Tecnologías y herramientas que domino
+          {t("home.techTitle")}
         </motion.h2>
 
         <div className="flex flex-col lg:flex-row gap-12 justify-center items-stretch max-w-6xl mx-auto">
           {/* Lenguajes de Programación */}
           <SectionCard
-            title="Lenguajes de Programación"
+            title={t("home.languages")}
             color="text-yellow-400"
           >
             <div className="grid grid-cols-2 gap-4">
@@ -207,7 +208,7 @@ export default function Inicio() {
           </SectionCard>
 
           {/* Frameworks y Librerías */}
-          <SectionCard title="Frameworks y Librerías" color="text-blue-400">
+          <SectionCard title={t("home.frameworks")} color="text-blue-400">
             <div className="grid grid-cols-2 gap-4">
               <SkillCard
                 icon={<FaReact />}
@@ -237,7 +238,7 @@ export default function Inicio() {
           </SectionCard>
 
           {/* Herramientas y Entornos */}
-          <SectionCard title="Herramientas y Entornos" color="text-green-400">
+          <SectionCard title={t("home.tools")} color="text-green-400">
             <div className="grid grid-cols-2 gap-4">
               <SkillCard
                 icon={<FaGitAlt />}
@@ -277,4 +278,3 @@ const SectionCard = ({ title, children, color }) => (
     <div className="flex flex-wrap justify-center gap-8">{children}</div>
   </motion.div>
 );
-

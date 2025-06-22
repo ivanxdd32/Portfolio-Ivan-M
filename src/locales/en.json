@@ -3,5 +3,13 @@
     "about": "About me",
     "projects": "Projects",
     "contact": "Contact"
+  },
+  "home": {
+    "greeting": "Hi, I'm",
+    "description": "Developer passionate about technology, cybersecurity, and software development.",
+    "techTitle": "Technologies and tools I master",
+    "languages": "Programming Languages",
+    "frameworks": "Frameworks and Libraries",
+    "tools": "Tools and Environments"
   }
 }

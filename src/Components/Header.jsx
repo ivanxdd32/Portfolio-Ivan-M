@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 
 // Banderas disponibles
 const flags = [
-  { code: "es", label: "Español", src: "/flags/co.png" },
+  { code: "es", label: "Español", src: "/flags/es.png" },
   { code: "en", label: "English", src: "/flags/us.png" },
   { code: "fr", label: "Français", src: "/flags/fr.png" },
 ];
@@ -55,7 +55,7 @@ export default function Header() {
         >
           {/* Logo */}
           <h1 className="text-xl font-bold flex items-center">
-            Ivan<span className="text-blue-400">.dev</span>
+            IVAN<span className="text-blue-400">.DEV</span>
           </h1>
 
           {/* Selector de idioma */}
