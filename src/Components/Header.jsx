@@ -46,12 +46,13 @@ export default function Header() {
 
   return (
     <div className="font-sans bg-gray-900 text-white">
-      <header className="fixed top-0 left-0 w-full flex justify-between items-center p-4 md:pl-6 bg-gray-800 shadow-md z-50">
+      <header className="fixed top-0 left-0 w-full flex flex-col sm:flex-row items-start sm:items-center justify-between p-4 sm:pl-6 bg-gray-800 shadow-md z-50">
+        {/* Contenedor superior: Logo + idioma */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="flex items-center gap-3 relative"
+          className="w-full flex flex-row justify-between items-center sm:w-auto sm:flex-row sm:justify-start sm:items-center"
         >
           {/* Logo */}
           <h1 className="text-xl font-bold flex items-center">
@@ -59,10 +60,12 @@ export default function Header() {
           </h1>
 
           {/* Selector de idioma */}
-          <div className="relative flex items-center">
+          <div className="relative flex items-center ml-2">
             <button
               onClick={toggleDropdown}
-              className="ml-2 border border-gray-600 rounded-md p-[3px] hover:border-blue-400 transition flex items-center justify-center"
+              aria-expanded={showDropdown}
+              aria-label="Select language"
+              className="border border-gray-600 rounded-md p-[3px] hover:border-blue-400 transition flex items-center justify-center"
             >
               <img
                 src={selectedLang.src}
@@ -104,9 +107,9 @@ export default function Header() {
           </div>
         </motion.div>
 
-        {/* Menú de navegación */}
-        <nav>
-          <ul className="flex gap-2 sm:gap-4 text-xs sm:text-base md:pr-5 relative">
+        {/* Menú de navegación debajo en móvil, a la derecha en sm+ */}
+        <nav className="w-full sm:w-auto mt-2 sm:mt-0 flex justify-start sm:justify-end">
+          <ul className="w-full flex justify-around gap-2 sm:gap-4 text-xs sm:text-base sm:pr-5 relative">
             {navLinks.map(({ path, label }) => {
               const isActive = location.pathname === path;
               const isClicked = clickedLink === path;

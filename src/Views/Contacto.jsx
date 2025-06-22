@@ -132,7 +132,7 @@ export default function Contacto() {
           transition={{ duration: 0.7 }}
         >
           <motion.h2
-            className="text-3xl font-bold flex items-center gap-2 pt-10"
+            className="text-3xl font-bold flex items-center gap-2 pt-10 mt-6 lg:mt-0"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}

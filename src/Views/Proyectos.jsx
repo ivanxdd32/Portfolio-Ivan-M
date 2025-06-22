@@ -170,8 +170,11 @@ export default function Proyectos() {
   };
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center text-center bg-gray-900 text-white py-12 px-4 overflow-hidden">
-      <motion.h2 className="text-2xl font-bold text-center pt-4 pb-8 mt-4">
+    <section className="min-h-screen flex flex-col items-center text-center bg-gray-900 text-white py-12 px-4 overflow-hidden">
+      {/* Espaciador visible solo en pantallas pequeñas */}
+      <div className="block sm:hidden h-16"></div>
+
+      <motion.h2 className="text-2xl font-bold text-center pt-4 pb-8 mt-4 sm:mt-16 md:mt-16 lg:mt-12">
         {textoAnimado.split("").map((letra, i) => (
           <motion.span
             key={i}
@@ -250,7 +253,6 @@ export default function Proyectos() {
             ✕
           </motion.button>
 
-          {/* Detalles del proyecto */}
           <motion.div
             className="relative w-full max-w-lg md:max-w-3xl p-6 md:p-8 rounded-2xl border border-gray-700/50 shadow-xl 
             bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-white max-h-[80vh] overflow-y-auto animate__animated animate__bounceIn"
