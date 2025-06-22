@@ -11,5 +11,28 @@
     "languages": "Langages de programmation",
     "frameworks": "Frameworks et bibliothèques",
     "tools": "Outils et environnements"
+  },
+  "projects": {
+    "title": "Mes Projets",
+    "technologiesUsed": "Technologies utilisées :",
+    "viewProject": "Voir le projet en action",
+    "tareku": {
+      "description": "Tareku est une application web conçue pour gérer les tâches efficacement. Elle permet de créer, organiser et visualiser des tâches avec des dates limites, en les priorisant selon leur urgence. Son interface intuitive et moderne facilite la gestion du temps et aide les utilisateurs à améliorer leur productivité."
+    },
+    "imh4nnyhub": {
+      "description": "Une plateforme visuellement attrayante qui centralise les liens vers les réseaux sociaux et les options de dons en un seul endroit. Grâce à une interface animée et des effets dynamiques, elle offre aux abonnés une expérience fluide et accessible."
+    },
+    "portfolio": {
+      "description": "Voici mon portfolio en ligne, un site moderne et dynamique où je présente mes projets, mes compétences et mon expérience. Il intègre des animations fluides et des effets visuels avancés pour une expérience attrayante et interactive."
+    },
+    "imh4nnyhupdate": {
+      "description": "La nouvelle version d’IMH4NNY HUB représente une amélioration significative en matière de design, d’interactivité et d’utilisabilité. Elle propose désormais une interface encore plus dynamique et attrayante, avec une meilleure disposition des éléments pour une expérience utilisateur plus fluide."
+    },
+    "scientistcalc": {
+      "description": "Une calculatrice web intuitive capable d’effectuer des opérations de base et scientifiques, y compris des expressions longues avec un historique visible. Son design moderne et réactif améliore l’expérience utilisateur avec un défilement horizontal, un arrondi des résultats et une gestion des erreurs."
+    },
+    "clocks-international-timezones": {
+      "description": "Une application web affichant l’heure actuelle dans différentes régions du monde, avec un design dynamique, des animations douces et une option de mode clair/sombre. Elle permet aux utilisateurs de sélectionner des régions, personnaliser l’affichage et profiter d’un fond interactif et animé."
+    }
   }
 }

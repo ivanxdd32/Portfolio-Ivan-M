@@ -11,5 +11,28 @@
     "languages": "Lenguajes de Programación",
     "frameworks": "Frameworks y Librerías",
     "tools": "Herramientas y Entornos"
+  },
+  "projects": {
+    "title": "Mis Proyectos",
+    "technologiesUsed": "Tecnologías utilizadas:",
+    "viewProject": "Visualiza el proyecto en acción",
+    "tareku": {
+      "description": "Tareku es una aplicación web diseñada para gestionar tareas de manera eficiente. Permite crear, organizar y visualizar tareas con fechas límite, priorizándolas según su urgencia. Su interfaz intuitiva y moderna facilita la administración del tiempo, ayudando a los usuarios a mejorar su productividad."
+    },
+    "imh4nnyhub": {
+      "description": "Una plataforma visualmente atractiva que centraliza enlaces a redes sociales y opciones de donación en un solo lugar. Con una interfaz animada y efectos dinámicos, ofrece a los seguidores una experiencia fluida y accesible."
+    },
+    "portfolio": {
+      "description": "Este es mi portafolio web, un sitio moderno y dinámico donde muestro mis proyectos, habilidades y experiencia. Implementa animaciones fluidas y efectos visuales avanzados para una experiencia atractiva e interactiva."
+    },
+    "imh4nnyhupdate": {
+      "description": "Nueva versión de IMH4NNY HUB, representa una mejora significativa en diseño, interactividad y usabilidad. Ahora cuenta con una interfaz aún más dinámica y atractiva, con una mejor disposición de los elementos para una experiencia de usuario más fluida."
+    },
+    "scientistcalc": {
+      "description": "Una calculadora web intuitiva capaz de realizar operaciones básicas y científicas, incluyendo expresiones largas con historial visible. Su diseño responsivo y moderno mejora la experiencia del usuario, integrando scroll horizontal, redondeo de resultados y manejo de errores."
+    },
+    "clocks-international-timezones": {
+      "description": "Una aplicación web que muestra la hora actual en distintas zonas del mundo, con un diseño dinámico, animaciones suaves y opción de modo claro/oscuro. Permite al usuario seleccionar regiones, personalizar la visualización y disfrutar de un fondo interactivo y animado."
+    }
   }
 }

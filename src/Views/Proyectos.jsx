@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import "animate.css";
 
 // Imágenes de proyectos
@@ -10,98 +11,6 @@ import imh4nny_hupdate from "../assets/Imh4nny_hubUpdate.png";
 import ScientistCalc from "../assets/ScientistCalc.png";
 import Clocks from "../assets/Clocks.png";
 
-const proyectos = [
-  {
-    id: 1,
-    nombre: "TAREKU",
-    descripcion:
-      "Tareku es una aplicación web diseñada para gestionar tareas de manera eficiente. Permite crear, organizar y visualizar tareas con fechas límite, priorizándolas según su urgencia. Su interfaz intuitiva y moderna facilita la administración del tiempo, ayudando a los usuarios a mejorar su productividad.",
-    tecnologias: [
-      "HTML",
-      "CSS",
-      "JAVASCRIPT",
-      "NODE.JS",
-      "EXPRESS.JS",
-      "MYSQL",
-    ],
-    imagen: tareku,
-    deploy: "https://tareku.onrender.com/inicio_de_sesion/login.html",
-  },
-  {
-    id: 2,
-    nombre: "IMH4NNY HUB",
-    descripcion:
-      "Una plataforma visualmente atractiva que centraliza enlaces a redes sociales y opciones de donación en un solo lugar. Con una interfaz animada y efectos dinámicos, ofrece a los seguidores una experiencia fluida y accesible.",
-    tecnologias: ["HTML", "CSS", "JAVASCRIPT", "ANIMATE.CSS"],
-    imagen: imh4nny_hub,
-    deploy: "https://imh4nny.netlify.app/",
-  },
-  {
-    id: 3,
-    nombre: "PORTFOLIO",
-    descripcion:
-      "Este es mi portafolio web, un sitio moderno y dinámico donde muestro mis proyectos, habilidades y experiencia. Implementa animaciones fluidas y efectos visuales avanzados para una experiencia atractiva e interactiva.",
-    tecnologias: [
-      "HTML",
-      "TAILWINDCSS",
-      "REACT",
-      "VITE",
-      "FRAMER MOTION",
-      "GSAP",
-      "NODEMAILER",
-      "ANIMATE.CSS",
-    ],
-    imagen: portfolio,
-    deploy: "https://portfolio-ivan-m.onrender.com/",
-  },
-  {
-    id: 4,
-    nombre: "IMH4NNY HUPDATE",
-    descripcion:
-      "Nueva versión de IMH4NNY HUB, representa una mejora significativa en diseño, interactividad y usabilidad. Ahora cuenta con una interfaz aún más dinámica y atractiva, con una mejor disposición de los elementos para una experiencia de usuario más fluida.",
-    tecnologias: [
-      "HTML",
-      "TAILWINDCSS",
-      "REACT",
-      "VITE",
-      "FRAMER MOTION",
-      "GSAP",
-      "ANIMATE.CSS",
-    ],
-    imagen: imh4nny_hupdate,
-    deploy: "https://imh4nny-hubupdate.onrender.com/",
-  },
-  {
-    id: 5,
-    nombre: "SCIENTISTCALC",
-    descripcion:
-      "Una calculadora web intuitiva capaz de realizar operaciones básicas y científicas, incluyendo expresiones largas con historial visible. Su diseño responsivo y moderno mejora la experiencia del usuario, integrando scroll horizontal, redondeo de resultados y manejo de errores.",
-    tecnologias: [
-      "HTML",
-      "CSS",
-      "REACT",
-      "VITE",
-      "TONE.JS",
-      "GSAP",
-      "I18NEXT",
-      "FRAMER MOTION",
-    ],
-    imagen: ScientistCalc,
-    deploy: "https://scientifical.netlify.app/",
-  },
-  {
-    id: 6,
-    nombre: "CLOCKS - INTERNATIONAL TIMEZONES",
-    descripcion:
-      "Una aplicación web que muestra la hora actual en distintas zonas del mundo, con un diseño dinámico, animaciones suaves y opción de modo claro/oscuro. Permite al usuario seleccionar regiones, personalizar la visualización y disfrutar de un fondo interactivo y animado.",
-    tecnologias: ["HTML", "CSS", "REACT", "VITE", "FRAMER MOTION"],
-    imagen: Clocks,
-    deploy: "https://clocks-international-timezones.netlify.app/",
-  },
-];
-
-const textoAnimado = "Mis Proyectos";
-
 export default function Proyectos() {
   const [proyectoActivo, setProyectoActivo] = useState(null);
   const [animando, setAnimando] = useState(false);
@@ -109,6 +18,98 @@ export default function Proyectos() {
   const [animandoEntrada, setAnimandoEntrada] = useState(true);
   const [reanimarTexto, setReanimarTexto] = useState(false);
   const [animarSalida, setAnimarSalida] = useState(false);
+  const { t } = useTranslation();
+  const textoAnimado = t("projects.title");
+
+  const proyectos = [
+    {
+      id: 1,
+      key: "tareku",
+      nombre: "TAREKU",
+      descripcion: t("projects.tareku.description"),
+      tecnologias: [
+        "HTML",
+        "CSS",
+        "JAVASCRIPT",
+        "NODE.JS",
+        "EXPRESS.JS",
+        "MYSQL",
+      ],
+      imagen: tareku,
+      deploy: "https://tareku.onrender.com/inicio_de_sesion/login.html",
+    },
+    {
+      id: 2,
+      key: "imh4nnyhub",
+      nombre: "IMH4NNY HUB",
+      descripcion: t("projects.imh4nnyhub.description"),
+      tecnologias: ["HTML", "CSS", "JAVASCRIPT", "ANIMATE.CSS"],
+      imagen: imh4nny_hub,
+      deploy: "https://imh4nny.netlify.app/",
+    },
+    {
+      id: 3,
+      key: "portfolio",
+      nombre: "PORTFOLIO",
+      descripcion: t("projects.portfolio.description"),
+      tecnologias: [
+        "HTML",
+        "TAILWINDCSS",
+        "REACT",
+        "VITE",
+        "FRAMER MOTION",
+        "GSAP",
+        "NODEMAILER",
+        "ANIMATE.CSS",
+      ],
+      imagen: portfolio,
+      deploy: "https://portfolio-ivan-m.onrender.com/",
+    },
+    {
+      id: 4,
+      key: "imh4nnyhupdate",
+      nombre: "IMH4NNY HUPDATE",
+      descripcion: t("projects.imh4nnyhupdate.description"),
+      tecnologias: [
+        "HTML",
+        "TAILWINDCSS",
+        "REACT",
+        "VITE",
+        "FRAMER MOTION",
+        "GSAP",
+        "ANIMATE.CSS",
+      ],
+      imagen: imh4nny_hupdate,
+      deploy: "https://imh4nny-hubupdate.onrender.com/",
+    },
+    {
+      id: 5,
+      key: "scientistcalc",
+      nombre: "SCIENTISTCALC",
+      descripcion: t("projects.scientistcalc.description"),
+      tecnologias: [
+        "HTML",
+        "CSS",
+        "REACT",
+        "VITE",
+        "TONE.JS",
+        "GSAP",
+        "I18NEXT",
+        "FRAMER MOTION",
+      ],
+      imagen: ScientistCalc,
+      deploy: "https://scientifical.netlify.app/",
+    },
+    {
+      id: 6,
+      key: "clocks-international-timezones",
+      nombre: "CLOCKS - INTERNATIONAL TIMEZONES",
+      descripcion: t("projects.clocks-international-timezones.description"),
+      tecnologias: ["HTML", "CSS", "REACT", "VITE", "FRAMER MOTION"],
+      imagen: Clocks,
+      deploy: "https://clocks-international-timezones.netlify.app/",
+    },
+  ];
 
   useEffect(() => {
     setTimeout(() => {
@@ -260,11 +261,11 @@ export default function Proyectos() {
             </h2>
 
             <p className="text-gray-300 text-lg text-center mt-3">
-              {proyectoActivo.descripcion}
+              {t(`projects.${proyectoActivo.key}.description`)}
             </p>
 
             <h3 className="text-lg md:text-xl font-semibold mt-6 text-center text-gray-200">
-              Tecnologías utilizadas:
+              {t("projects.technologiesUsed")}
             </h3>
 
             <div className="flex flex-wrap justify-center gap-2 mt-3">
@@ -284,7 +285,7 @@ export default function Proyectos() {
               rel="noopener noreferrer"
               className="mt-6 inline-block px-5 py-2 text-lg font-semibold text-white bg-blue-500 rounded-lg shadow-md transition-all duration-300 hover:bg-blue-600 hover:scale-105"
             >
-              🚀 Visualiza el proyecto en acción
+              🚀 {t("projects.viewProject")}
             </a>
           </motion.div>
         </motion.div>

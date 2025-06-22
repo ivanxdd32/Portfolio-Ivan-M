@@ -11,5 +11,28 @@
     "languages": "Programming Languages",
     "frameworks": "Frameworks and Libraries",
     "tools": "Tools and Environments"
+  },
+  "projects": {
+    "title": "My Projects",
+    "technologiesUsed": "Technologies used:",
+    "viewProject": "View the project in action",
+    "tareku": {
+      "description": "Tareku is a web application designed to manage tasks efficiently. It allows users to create, organize, and view tasks with deadlines, prioritizing them by urgency. Its intuitive and modern interface makes time management easier, helping users boost their productivity."
+    },
+    "imh4nnyhub": {
+      "description": "A visually appealing platform that centralizes links to social media and donation options in one place. With an animated interface and dynamic effects, it offers followers a smooth and accessible experience."
+    },
+    "portfolio": {
+      "description": "This is my personal portfolio, a modern and dynamic website showcasing my projects, skills, and experience. It features smooth animations and advanced visual effects for an attractive and interactive experience."
+    },
+    "imh4nnyhupdate": {
+      "description": "The new version of IMH4NNY HUB represents a significant improvement in design, interactivity, and usability. It now offers an even more dynamic and attractive interface with better layout for a smoother user experience."
+    },
+    "scientistcalc": {
+      "description": "An intuitive web calculator capable of performing both basic and scientific operations, including long expressions with visible history. Its responsive and modern design enhances user experience with horizontal scroll, result rounding, and error handling."
+    },
+    "clocks-international-timezones": {
+      "description": "A web application that displays the current time across different regions of the world, with a dynamic design, smooth animations, and a light/dark mode toggle. Users can select regions, customize the view, and enjoy an interactive animated background."
+    }
   }
 }
