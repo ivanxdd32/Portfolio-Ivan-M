@@ -15,8 +15,8 @@ const flags = [
   { code: "de", label: "Deutsch", src: "/flags/de.webp" },
   { code: "zh", label: "中文", src: "/flags/zh.webp" }, // Chino simplificado
   { code: "ar", label: "العربية", src: "/flags/ar.webp" }, // Árabe
-  { code: "hi", label: "हिन्दी", src: "/flags/hi.webp" },  // Hindi
-  { code: "ru", label: "Русский", src: "/flags/ru.webp" }  // Ruso
+  { code: "hi", label: "हिन्दी", src: "/flags/hi.webp" }, // Hindi
+  { code: "ru", label: "Русский", src: "/flags/ru.webp" }, // Ruso
 ];
 
 export default function Header() {
@@ -116,8 +116,13 @@ export default function Header() {
           </div>
         </motion.div>
 
-        {/* Menú de navegación debajo en móvil, a la derecha en sm+ */}
-        <nav className="w-full sm:w-auto mt-2 sm:mt-0 flex justify-start sm:justify-end">
+        {/* Menú de navegación */}
+        <motion.nav
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="w-full sm:w-auto mt-2 sm:mt-0 flex justify-start sm:justify-end"
+        >
           <ul className="w-full flex justify-around gap-8 sm:gap-4 text-xs sm:text-base md:pr-3 relative">
             {navLinks.map(({ path, label }) => {
               const isActive = location.pathname === path;
@@ -168,7 +173,7 @@ export default function Header() {
               );
             })}
           </ul>
-        </nav>
+        </motion.nav>
       </header>
     </div>
   );
