@@ -55,15 +55,15 @@ export default function Header() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="w-full flex flex-row justify-between items-center sm:w-auto sm:flex-row sm:justify-start sm:items-center"
+          className="w-full flex flex-row justify-between items-center sm:w-auto sm:flex-row gap-4 sm:justify-start sm:items-center"
         >
           {/* Logo */}
-          <h1 className="text-xl font-bold flex items-center">
+          <h1 className="text-xl font-bold flex items-center ml-3 sm:ml-0">
             IVAN<span className="text-blue-400">.DEV</span>
           </h1>
 
           {/* Selector de idioma */}
-          <div className="relative flex items-center ml-2">
+          <div className="relative flex items-center ml-2 mr-2.5 sm:mr-0">
             <button
               onClick={toggleDropdown}
               aria-expanded={showDropdown}
@@ -112,7 +112,7 @@ export default function Header() {
 
         {/* Menú de navegación debajo en móvil, a la derecha en sm+ */}
         <nav className="w-full sm:w-auto mt-2 sm:mt-0 flex justify-start sm:justify-end">
-          <ul className="w-full flex justify-around gap-2 sm:gap-4 text-xs sm:text-base sm:pr-5 relative">
+          <ul className="w-full flex justify-around gap-8 sm:gap-8 text-xs sm:text-base sm:pr-5 relative">
             {navLinks.map(({ path, label }) => {
               const isActive = location.pathname === path;
               const isClicked = clickedLink === path;
