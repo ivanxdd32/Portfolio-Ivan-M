@@ -154,6 +154,10 @@ export default function Contacto() {
             <p className="text-gray-400 mb-4 mt-4 max-w-md">
               {t("contact.description")}
             </p>
+
+            <p className="text-sm text-gray-500 italic">
+              🌍 {t("contact.location")}
+            </p>
           </motion.div>
 
           {/* Derecha: formulario */}

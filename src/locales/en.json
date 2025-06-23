@@ -38,6 +38,7 @@
   "contact": {
     "title": "Contact Me",
     "description": "Send me a message and I’ll reply as soon as possible.",
+    "location": "Cúcuta, Norte de Santander – Colombia",
     "nameLabel": "Name",
     "placeholderName": "Your Name",
     "emailLabel": "Email",
