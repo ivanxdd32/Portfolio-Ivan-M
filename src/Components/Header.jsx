@@ -112,7 +112,7 @@ export default function Header() {
 
         {/* Menú de navegación debajo en móvil, a la derecha en sm+ */}
         <nav className="w-full sm:w-auto mt-2 sm:mt-0 flex justify-start sm:justify-end">
-          <ul className="w-full flex justify-around gap-8 sm:gap-8 text-xs sm:text-base sm:pr-5 relative">
+          <ul className="w-full flex justify-around gap-8 sm:gap-4 text-xs sm:text-base md:pr-3 relative">
             {navLinks.map(({ path, label }) => {
               const isActive = location.pathname === path;
               const isClicked = clickedLink === path;
@@ -137,7 +137,7 @@ export default function Header() {
 
                   <Link
                     to={path}
-                    className="relative z-10 inline-block px-1 py-1 rounded-md"
+                    className="relative z-10 inline-block px-1 sm:px-4 py-1 rounded-md"
                   >
                     <motion.span
                       className={`transition-colors duration-300 ${
