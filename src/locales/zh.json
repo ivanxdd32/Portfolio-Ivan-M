@@ -1,0 +1,70 @@
+{
+  "navbar": {
+    "about": "关于我",
+    "projects": "项目",
+    "contact": "联系"
+  },
+  "home": {
+    "greeting": "你好，我是",
+    "description": "热衷于技术、网络安全和软件开发的开发者。",
+    "techTitle": "我掌握的技术和工具",
+    "languages": "编程语言",
+    "frameworks": "框架和库",
+    "tools": "工具和环境"
+  },
+  "projects": {
+    "title": "我的项目",
+    "technologiesUsed": "使用的技术：",
+    "viewProject": "查看项目实况",
+    "tareku": {
+      "description": "Tareku 是一个旨在高效管理任务的 Web 应用。它允许创建、组织和查看带有截止日期的任务，并根据紧急程度对其进行优先排序。其直观且现代化的界面简化了时间管理，帮助用户提高生产力。"
+    },
+    "imh4nnyhub": {
+      "description": "一个视觉上吸引人的平台，将社交媒体链接和捐赠选项集中于一个页面。具有动画界面和动态效果，为粉丝提供流畅易用的体验。"
+    },
+    "portfolio": {
+      "description": "这是我的个人作品集网页，一个现代且动态的网站，展示我的项目、技能和经验。它实现了流畅的动画和高级视觉效果，提供吸引人且具互动性的体验。"
+    },
+    "imh4nnyhupdate": {
+      "description": "IMH4NNY HUB 的新版本，在设计、互动性和可用性方面有显著提升。现在拥有更动态和吸引人的界面，元素布局更佳，为用户提供更流畅的体验。"
+    },
+    "scientistcalc": {
+      "description": "一个直观的网络计算器，能够执行基础和科学运算，并支持长表达式和可见历史记录。其响应式且现代的设计提升了用户体验，集成水平滚动、结果四舍五入和错误处理功能。"
+    },
+    "clocks-international-timezones": {
+      "description": "一个展示世界不同时区当前时间的 Web 应用，具有动态设计、平滑动画和明/暗模式选项。允许用户选择区域、自定义显示并享受互动且动画的背景。"
+    }
+  },
+  "contact": {
+    "title": "联系我",
+    "description": "给我发送一条消息，我会尽快回复。",
+    "location": "库库塔，桑坦德省北部 — 哥伦比亚",
+    "nameLabel": "姓名",
+    "placeholderName": "您的姓名",
+    "emailLabel": "邮箱",
+    "placeholderEmail": "您的邮箱",
+    "messageLabel": "消息",
+    "placeholderMessage": "在此输入您的消息...",
+    "send": "发送",
+    "sending": "发送中...",
+    "success": "消息发送成功 ✅",
+    "error": "发送消息时出错 ❌",
+    "serverError": "服务器连接错误 ❌",
+    "linkedin": "领英",
+    "github": "GitHub"
+  },
+  "meta": {
+    "inicio": {
+      "title": "首页 | Iván Andrés - 作品集",
+      "description": "欢迎来到 Iván Andrés 的作品集。探索使用 React、Node.js 和创新设计的创意项目。"
+    },
+    "proyectos": {
+      "title": "项目 | Iván Andrés - 作品集",
+      "description": "探索 Iván Andrés 开发的一系列项目，采用现代技术和良好设计。"
+    },
+    "contacto": {
+      "title": "联系 | Iván Andrés - 作品集",
+      "description": "想与我合作或有提案？通过表单或社交媒体与 Iván Andrés 联系。"
+    }
+  }
+}

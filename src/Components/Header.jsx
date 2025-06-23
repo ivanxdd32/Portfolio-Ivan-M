@@ -11,6 +11,12 @@ const flags = [
   { code: "es", label: "Español", src: "/flags/es.webp" },
   { code: "en", label: "English", src: "/flags/us.webp" },
   { code: "fr", label: "Français", src: "/flags/fr.webp" },
+  { code: "pt", label: "Português", src: "/flags/pt.webp" },
+  { code: "de", label: "Deutsch", src: "/flags/de.webp" },
+  { code: "zh", label: "中文", src: "/flags/zh.webp" }, // Chino simplificado
+  { code: "ar", label: "العربية", src: "/flags/ar.webp" }, // Árabe
+  { code: "hi", label: "हिन्दी", src: "/flags/hi.webp" },  // Hindi
+  { code: "ru", label: "Русский", src: "/flags/ru.webp" }  // Ruso
 ];
 
 export default function Header() {

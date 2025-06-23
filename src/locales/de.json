@@ -1,0 +1,70 @@
+{
+  "navbar": {
+    "about": "Über mich",
+    "projects": "Projekte",
+    "contact": "Kontakt"
+  },
+  "home": {
+    "greeting": "Hallo, ich bin",
+    "description": "Leidenschaftlicher Entwickler für Technologie, Cybersicherheit und Softwareentwicklung.",
+    "techTitle": "Technologien und Werkzeuge, die ich beherrsche",
+    "languages": "Programmiersprachen",
+    "frameworks": "Frameworks und Bibliotheken",
+    "tools": "Werkzeuge und Umgebungen"
+  },
+  "projects": {
+    "title": "Meine Projekte",
+    "technologiesUsed": "Verwendete Technologien:",
+    "viewProject": "Projekt in Aktion ansehen",
+    "tareku": {
+      "description": "Tareku ist eine Webanwendung, die entwickelt wurde, um Aufgaben effizient zu verwalten. Sie ermöglicht das Erstellen, Organisieren und Anzeigen von Aufgaben mit Fristen und priorisiert sie nach Dringlichkeit. Die intuitive und moderne Oberfläche erleichtert die Zeitverwaltung und hilft Anwendern, ihre Produktivität zu steigern."
+    },
+    "imh4nnyhub": {
+      "description": "Eine visuell ansprechende Plattform, die Links zu sozialen Netzwerken und Spendenoptionen an einem Ort zentralisiert. Mit animierter Oberfläche und dynamischen Effekten bietet sie Followern ein flüssiges und zugängliches Erlebnis."
+    },
+    "portfolio": {
+      "description": "Dies ist mein Webportfolio, eine moderne und dynamische Seite, auf der ich meine Projekte, Fähigkeiten und Erfahrung zeige. Sie implementiert flüssige Animationen und fortgeschrittene visuelle Effekte für ein ansprechendes und interaktives Erlebnis."
+    },
+    "imh4nnyhupdate": {
+      "description": "Neue Version von IMH4NNY HUB, stellt eine signifikante Verbesserung in Design, Interaktivität und Benutzerfreundlichkeit dar. Jetzt mit noch dynamischerer und attraktiverer Oberfläche sowie verbesserter Anordnung der Elemente für ein flüssigeres Benutzererlebnis."
+    },
+    "scientistcalc": {
+      "description": "Ein intuitiver Webrechner, der grundlegende und wissenschaftliche Operationen durchführen kann, einschließlich langer Ausdrücke mit sichtbarem Verlauf. Sein responsives und modernes Design verbessert das Nutzererlebnis, integriert horizontales Scrollen, Rundung der Ergebnisse und Fehlerbehandlung."
+    },
+    "clocks-international-timezones": {
+      "description": "Eine Webanwendung, die die aktuelle Uhrzeit in verschiedenen Zeitzonen der Welt anzeigt, mit dynamischem Design, sanften Animationen und Hell-/Dunkelmodus. Der Nutzer kann Regionen auswählen, die Anzeige anpassen und einen interaktiven, animierten Hintergrund genießen."
+    }
+  },
+  "contact": {
+    "title": "Kontaktieren Sie mich",
+    "description": "Senden Sie mir eine Nachricht und ich antworte so schnell wie möglich.",
+    "location": "Cúcuta, Norte de Santander – Kolumbien",
+    "nameLabel": "Name",
+    "placeholderName": "Ihr Name",
+    "emailLabel": "E‑Mail",
+    "placeholderEmail": "Ihre E‑Mail",
+    "messageLabel": "Nachricht",
+    "placeholderMessage": "Schreibe deine Nachricht hier...",
+    "send": "Senden",
+    "sending": "Wird gesendet...",
+    "success": "Nachricht erfolgreich gesendet ✅",
+    "error": "Fehler beim Senden der Nachricht ❌",
+    "serverError": "Fehler bei der Verbindung zum Server ❌",
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
+  },
+  "meta": {
+    "inicio": {
+      "title": "Start | Iván Andrés - Portfolio",
+      "description": "Willkommen im Portfolio von Iván Andrés. Entdecke kreative Projekte mit React, Node.js und innovativem Design."
+    },
+    "proyectos": {
+      "title": "Projekte | Iván Andrés - Portfolio",
+      "description": "Erkunde eine Sammlung von Projekten, entwickelt von Iván Andrés, mit modernen Technologien und gutem Design."
+    },
+    "contacto": {
+      "title": "Kontakt | Iván Andrés - Portfolio",
+      "description": "Möchten Sie mit mir arbeiten oder haben Sie ein Angebot? Kontaktieren Sie Iván Andrés über das Formular oder soziale Netzwerke."
+    }
+  }
+}

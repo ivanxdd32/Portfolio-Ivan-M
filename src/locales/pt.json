@@ -1,0 +1,70 @@
+{
+  "navbar": {
+    "about": "Sobre mim",
+    "projects": "Projetos",
+    "contact": "Contato"
+  },
+  "home": {
+    "greeting": "Olá, sou",
+    "description": "Desenvolvedor apaixonado por tecnologia, cibersegurança e desenvolvimento de software.",
+    "techTitle": "Tecnologias e ferramentas que domino",
+    "languages": "Linguagens de Programação",
+    "frameworks": "Frameworks e Bibliotecas",
+    "tools": "Ferramentas e Ambientes"
+  },
+  "projects": {
+    "title": "Meus Projetos",
+    "technologiesUsed": "Tecnologias utilizadas:",
+    "viewProject": "Veja o projeto em ação",
+    "tareku": {
+      "description": "Tareku é uma aplicação web projetada para gerir tarefas de forma eficiente. Permite criar, organizar e visualizar tarefas com prazos, priorizando-as conforme urgência. Sua interface intuitiva e moderna facilita a administração do tempo, ajudando os usuários a melhorar a produtividade."
+    },
+    "imh4nnyhub": {
+      "description": "Uma plataforma visualmente atraente que centraliza links para redes sociais e opções de doação em um só lugar. Com interface animada e efeitos dinâmicos, oferece aos seguidores uma experiência fluida e acessível."
+    },
+    "portfolio": {
+      "description": "Este é meu portfólio web, um site moderno e dinâmico onde mostro meus projetos, habilidades e experiência. Implementa animações suaves e efeitos visuais avançados para uma experiência atraente e interativa."
+    },
+    "imh4nnyhupdate": {
+      "description": "Nova versão do IMH4NNY HUB, representa uma melhora significativa em design, interatividade e usabilidade. Agora conta com uma interface ainda mais dinâmica e atraente, com disposição aprimorada dos elementos para uma experiência de usuário mais fluida."
+    },
+    "scientistcalc": {
+      "description": "Uma calculadora web intuitiva capaz de realizar operações básicas e científicas, incluindo expressões longas com histórico visível. Seu design responsivo e moderno melhora a experiência do usuário, integrando scroll horizontal, arredondamento de resultados e tratamento de erros."
+    },
+    "clocks-international-timezones": {
+      "description": "Uma aplicação web que mostra a hora atual em diferentes fusos horários do mundo, com design dinâmico, animações suaves e modo claro/escuro. Permite ao usuário selecionar regiões, personalizar a visualização e desfrutar de um fundo interativo e animado."
+    }
+  },
+  "contact": {
+    "title": "Entre em Contato",
+    "description": "Envie-me uma mensagem e responderei o mais rápido possível.",
+    "location": "Cúcuta, Norte de Santander – Colômbia",
+    "nameLabel": "Nome",
+    "placeholderName": "Seu Nome",
+    "emailLabel": "Email",
+    "placeholderEmail": "Seu Email",
+    "messageLabel": "Mensagem",
+    "placeholderMessage": "Escreva sua mensagem aqui...",
+    "send": "Enviar",
+    "sending": "Enviando...",
+    "success": "Mensagem enviada com sucesso ✅",
+    "error": "Erro ao enviar a mensagem ❌",
+    "serverError": "Erro na conexão com o servidor ❌",
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
+  },
+  "meta": {
+    "inicio": {
+      "title": "Início | Iván Andrés - Portfólio",
+      "description": "Bem-vindo ao portfólio de Iván Andrés. Descubra projetos criativos com React, Node.js e design inovador."
+    },
+    "proyectos": {
+      "title": "Projetos | Iván Andrés - Portfólio",
+      "description": "Explore uma coleção de projetos desenvolvidos por Iván Andrés, usando tecnologias modernas e bom design."
+    },
+    "contacto": {
+      "title": "Contato | Iván Andrés - Portfólio",
+      "description": "Quer trabalhar comigo ou tem uma proposta? Entre em contato com Iván Andrés através do formulário ou redes sociais."
+    }
+  }
+}
