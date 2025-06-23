@@ -1,5 +1,8 @@
-import { motion } from "framer-motion";
+// 1. React hooks
 import { useRef } from "react";
+
+// 2. Librerías externas
+import { motion } from "framer-motion";
 
 const SkillCard = ({ icon, label, color, url }) => {
   const cardRef = useRef(null);

@@ -51,5 +51,19 @@
     "serverError": "Error en la conexión con el servidor ❌",
     "linkedin": "LinkedIn",
     "github": "GitHub"
+  },
+  "meta": {
+    "inicio": {
+      "title": "Inicio | Iván Andrés - Portafolio",
+      "description": "Bienvenido al portafolio de Iván Andrés. Descubre proyectos creativos con React, Node.js y diseño innovador."
+    },
+    "proyectos": {
+      "title": "Proyectos | Iván Andrés - Portafolio",
+      "description": "Explora una colección de proyectos desarrollados por Iván Andrés, usando tecnologías modernas y buen diseño."
+    },
+    "contacto": {
+      "title": "Contacto | Iván Andrés - Portafolio",
+      "description": "¿Quieres trabajar conmigo o tienes una propuesta? Ponte en contacto con Iván Andrés a través del formulario o redes sociales."
+    }
   }
 }

@@ -1,13 +1,16 @@
+// 1. React y hooks
 import { useState, useEffect } from "react";
+
+// 2. Librerías externas
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
 // Banderas disponibles
 const flags = [
-  { code: "es", label: "Español", src: "/flags/es.png" },
-  { code: "en", label: "English", src: "/flags/us.png" },
-  { code: "fr", label: "Français", src: "/flags/fr.png" },
+  { code: "es", label: "Español", src: "/flags/es.webp" },
+  { code: "en", label: "English", src: "/flags/us.webp" },
+  { code: "fr", label: "Français", src: "/flags/fr.webp" },
 ];
 
 export default function Header() {

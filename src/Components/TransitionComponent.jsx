@@ -1,6 +1,11 @@
+// 1. React y hooks
 import React, { useContext, useEffect, useRef, useState } from "react";
+
+// 2. Librerías externas
 import { useLocation } from "react-router-dom";
 import gsap from "gsap";
+
+// 3. Contextos del proyecto
 import TransitionContext from "../Context/TransitionContext";
 
 const TransitionComponent = ({ children }) => {
