@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://portfolio-ivan-m-bc.onrender.com/sitemap.xml
