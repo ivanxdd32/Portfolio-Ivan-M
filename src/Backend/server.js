@@ -10,6 +10,34 @@ dotenv.config();
 
 const app = express();
 
+// Middleware para rechazar User-Agent sospechosos
+app.use((req, res, next) => {
+  const userAgent = req.get("User-Agent") || "";
+  if (!userAgent || userAgent.length < 10) {
+    return res.status(403).json({ success: false, message: "Acceso denegado" });
+  }
+  next();
+});
+
+// Middleware para validar manualmente el Origin
+app.use((req, res, next) => {
+  const origin = req.get("Origin");
+  if (origin && origin !== "https://portfolio-ivan-m.onrender.com") {
+    return res
+      .status(403)
+      .json({ success: false, message: "Origen no permitido" });
+  }
+  next();
+});
+
+// Middleware para detectar IPs con body vacío (posibles bots)
+app.use((req, res, next) => {
+  if (req.method === "POST" && Object.keys(req.body || {}).length === 0) {
+    console.warn("IP sospechosa:", req.ip);
+  }
+  next();
+});
+
 // Configuración de CORS
 const corsOptions = {
   origin: "https://portfolio-ivan-m.onrender.com",
@@ -33,14 +61,15 @@ const emailLimiter = rateLimit({
 app.post("/send-email", emailLimiter, async (req, res) => {
   let { name, email, message } = req.body;
 
-  // Validación de informacion
+  // Validación de contenido
   if (
     typeof name !== "string" ||
     typeof email !== "string" ||
     typeof message !== "string" ||
     !validator.isEmail(email) ||
     name.length > 100 ||
-    message.length > 1000
+    message.length > 1000 ||
+    /\$|\{|\}/.test(message) // Bloquea inyecciones tipo ${}
   ) {
     return res.status(400).json({
       success: false,
@@ -75,6 +104,10 @@ app.post("/send-email", emailLimiter, async (req, res) => {
       .status(200)
       .json({ success: true, message: "Correo enviado con éxito" });
   } catch (error) {
+    // Delay aleatorio para evitar ataques de fuerza bruta
+    await new Promise((resolve) =>
+      setTimeout(resolve, Math.random() * 1000 + 500)
+    );
     console.error("Error al enviar el correo:", error.message);
     res
       .status(500)
