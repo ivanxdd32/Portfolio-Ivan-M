@@ -170,7 +170,7 @@ export default function Contacto() {
             <form
               ref={formRef}
               onSubmit={sendEmail}
-              className="bg-gray-800 p-6 rounded-lg shadow-lg border border-blue-900/50"
+              className="bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-800"
             >
               <div className="mb-4">
                 <label className="block text-left text-gray-300 font-bold pb-2">
@@ -229,12 +229,11 @@ export default function Contacto() {
                 type="submit"
                 disabled={loading}
                 className="relative overflow-hidden w-full flex items-center justify-center gap-2 px-4 py-2 rounded-lg text-white font-bold transition-all duration-300 ease-in-out
-             bg-gradient-to-r from-blue-600 to-indigo-600 shadow-md hover:shadow-2xl focus:outline-none
-             hover:from-indigo-500 hover:to-blue-700"
+                bg-gradient-to-r from-blue-600 to-indigo-600 shadow-md hover:shadow-2xl focus:outline-none
+              hover:from-indigo-500 hover:to-blue-700"
                 whileHover={{ scale: 1.03, rotate: 0.5 }}
                 whileTap={{ scale: 0.97 }}
               >
-                {/* Efecto de luz que pasa por encima */}
                 <span className="absolute inset-0 bg-white opacity-10 blur-sm transform -translate-x-full hover:translate-x-full transition-transform duration-700" />
                 {loading ? (
                   <span className="flex items-center gap-2">

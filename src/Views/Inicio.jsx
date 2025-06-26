@@ -120,7 +120,7 @@ export default function Inicio() {
       <div>
         <section
           ref={sectionRef}
-          className="min-h-screen flex flex-col lg:flex-row items-center justify-center text-white bg-gray-900 lg:bg-gray-300 px-6 py-20"
+          className="min-h-screen flex flex-col lg:flex-row items-center justify-center text-white bg-gray-900 lg:bg-gray-300 px-6 py-32"
         >
           {/* Contenedor de texto alineado a la izquierda */}
           <motion.div
@@ -130,7 +130,7 @@ export default function Inicio() {
             transition={{ duration: 0.8, delay: 0.5 }}
           >
             {/* Columna izquierda - Texto */}
-            <div className="lg:p-12 lg:text-left space-y-4 lg:space-y-6 w-full h-full flex flex-col justify-center text-left lg:relative lg:bg-white lg:text-gray-800 rounded-l-lg">
+            <div className="lg:p-10 lg:text-left space-y-4 lg:space-y-6 w-full h-full flex flex-col justify-center text-left lg:relative lg:bg-white lg:text-gray-800 rounded-l-lg">
               <motion.h1
                 className="text-xl font-bold sm:text-3xl"
                 initial={{ opacity: 0, y: 50 }}
@@ -328,7 +328,7 @@ export default function Inicio() {
               </motion.p>
 
               <motion.p
-                className="text-sm text-gray-400 italic"
+                className="text-sm text-gray-400 italic border-l-4 border-gray-600 pl-4 mt-4"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
