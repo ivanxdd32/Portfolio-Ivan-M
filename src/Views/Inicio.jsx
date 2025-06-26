@@ -38,11 +38,13 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 export default function Inicio() {
   const sectionRef = useRef(null);
   const nextSectionRef = useRef(null);
+  const thirdSectionRef = useRef(null);
   const [showArrow, setShowArrow] = useState(false);
   const { t } = useTranslation();
 
   useEffect(() => {
     const timeout = setTimeout(() => {
+      // SECCIÓN 1
       gsap.to(sectionRef.current, {
         opacity: 0.5,
         scale: 0.2,
@@ -59,6 +61,7 @@ export default function Inicio() {
         },
       });
 
+      // SECCIÓN 2
       gsap.fromTo(
         nextSectionRef.current,
         { y: "0vh" },
@@ -74,9 +77,29 @@ export default function Inicio() {
           },
         }
       );
+
+      // SECCIÓN 3
+      gsap.fromTo(
+        thirdSectionRef.current,
+        { y: 100, scale: 0.7, opacity: 0 },
+        {
+          y: 0,
+          scale: 1,
+          opacity: 1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: thirdSectionRef.current,
+            start: "-42% bottom",
+            end: "-42% top",
+            scrub: true,
+            snap: true,
+            // markers: true,
+          },
+        }
+      );
     }, 1000);
 
-    return () => clearTimeout(timeout); // Limpieza del timeout para evitar problemas si el usuario cambia de página rápido
+    return () => clearTimeout(timeout);
   }, []);
 
   useEffect(() => {
@@ -97,7 +120,7 @@ export default function Inicio() {
       <div>
         <section
           ref={sectionRef}
-          className="h-screen flex flex-col lg:flex-row items-center justify-center text-white bg-gray-900 lg:bg-gray-300 px-10"
+          className="min-h-screen flex flex-col lg:flex-row items-center justify-center text-white bg-gray-900 lg:bg-gray-300 px-6 py-20"
         >
           {/* Contenedor de texto alineado a la izquierda */}
           <motion.div
@@ -177,7 +200,7 @@ export default function Inicio() {
         {/* TECNOLOGÍAS */}
         <section
           ref={nextSectionRef}
-          className="py-28 px-6 md:px-12 bg-gradient-to-b from-gray-900 via-gray-950 to-black text-white"
+          className="min-h-screen py-24 pt-28 md:pt-24 px-6 md:px-12 bg-gradient-to-b from-gray-900 via-gray-950 to-black text-white"
         >
           <motion.h2
             className="text-4xl font-extrabold text-center mb-16"
@@ -273,6 +296,62 @@ export default function Inicio() {
               </div>
             </SectionCard>
           </div>
+        </section>
+        <section
+          ref={thirdSectionRef}
+          className="min-h-screen flex flex-col lg:flex-row items-center justify-center bg-[#0A0B0A] text-white px-10 pt-28 md:pt-0"
+        >
+          <motion.div
+            className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            {/* Texto - Sobre mí */}
+            <div className="space-y-6 text-center lg:text-left">
+              <motion.h2
+                className="text-4xl font-bold text-blue-400 hover:text-blue-300 transition duration-300"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                {t("home.aboutMeTitle")}
+              </motion.h2>
+
+              <motion.p
+                className="text-lg text-gray-300 leading-relaxed transition-all duration-300 hover:text-gray-100"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
+                {t("home.aboutMe")}
+              </motion.p>
+
+              <motion.p
+                className="text-sm text-gray-400 italic"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+              >
+                ☕ {t("home.aboutMeNote")}
+              </motion.p>
+            </div>
+
+            {/* GIF animada */}
+            <motion.div
+              className="flex justify-center"
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8 }}
+              whileHover={{ scale: 1.05, rotate: 1 }}
+            >
+              <img
+                src="https://media.giphy.com/media/f3iwJFOVOwuy7K6FFw/giphy.gif"
+                alt="About me"
+                className="w-72 lg:w-full max-w-sm rounded-xl shadow-lg transition duration-300 hover:shadow-[0_0_30px_#2B266A]"
+              />
+            </motion.div>
+          </motion.div>
         </section>
       </div>
     </>

@@ -10,7 +10,10 @@
     "techTitle": "Technologies and tools I master",
     "languages": "Programming Languages",
     "frameworks": "Frameworks and Libraries",
-    "tools": "Tools and Environments"
+    "tools": "Tools and Environments",
+    "aboutMeTitle": "About Me",
+    "aboutMe": "I'm a web developer passionate about technological innovation and continuous learning. I enjoy working on creative and functional projects, focusing on detail and delivering unique user experiences. When I'm not coding, I explore cybersecurity and new web tools.",
+    "aboutMeNote": "Passionate about coffee and web development ☕"
   },
   "projects": {
     "title": "My Projects",

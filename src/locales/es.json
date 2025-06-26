@@ -10,7 +10,10 @@
     "techTitle": "Tecnologías y herramientas que domino",
     "languages": "Lenguajes de Programación",
     "frameworks": "Frameworks y Librerías",
-    "tools": "Herramientas y Entornos"
+    "tools": "Herramientas y Entornos",
+    "aboutMeTitle": "Sobre mí",
+    "aboutMe": "Soy un desarrollador con gran interés por la innovación tecnológica y el aprendizaje continuo. Me gusta trabajar en proyectos creativos y funcionales, enfocándome en los detalles y brindando experiencias únicas a los usuarios. Cuando no estoy programando, disfruto aprender sobre ciberseguridad y explorar nuevas herramientas del ecosistema web.",
+    "aboutMeNote": "Apasionado por el café y el desarrollo de software ☕"
   },
   "projects": {
     "title": "Mis Proyectos",
