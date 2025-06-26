@@ -74,7 +74,7 @@ export default function Header() {
               onClick={toggleDropdown}
               aria-expanded={showDropdown}
               aria-label="Select language"
-              className="border border-gray-600 rounded-md p-[3px] hover:border-blue-400 transition flex items-center justify-center"
+              className="border border-gray-600 rounded-md p-[3px] hover:border-blue-400 transition flex items-center justify-center cursor-pointer"
             >
               <img
                 src={selectedLang.src}

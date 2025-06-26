@@ -6,11 +6,14 @@
   },
   "home": {
     "greeting": "你好，我是",
-    "description": "热衷于技术、网络安全和软件开发的开发者。",
+    "description": "热爱技术、网络安全和软件开发的开发者。",
     "techTitle": "我掌握的技术和工具",
     "languages": "编程语言",
     "frameworks": "框架和库",
-    "tools": "工具和环境"
+    "tools": "工具和环境",
+    "aboutMeTitle": "关于我",
+    "aboutMe": "我是一名对技术创新和持续学习充满兴趣的开发者。我喜欢参与创意和实用的项目，注重细节，为用户带来独特的体验。不写代码时，我喜欢学习网络安全并探索新的 Web 工具。",
+    "aboutMeNote": "热爱咖啡和软件开发 ☕"
   },
   "projects": {
     "title": "我的项目",

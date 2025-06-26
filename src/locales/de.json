@@ -6,11 +6,14 @@
   },
   "home": {
     "greeting": "Hallo, ich bin",
-    "description": "Leidenschaftlicher Entwickler für Technologie, Cybersicherheit und Softwareentwicklung.",
+    "description": "Entwickler mit Leidenschaft für Technologie, Cybersicherheit und Softwareentwicklung.",
     "techTitle": "Technologien und Werkzeuge, die ich beherrsche",
     "languages": "Programmiersprachen",
     "frameworks": "Frameworks und Bibliotheken",
-    "tools": "Werkzeuge und Umgebungen"
+    "tools": "Werkzeuge und Umgebungen",
+    "aboutMeTitle": "Über mich",
+    "aboutMe": "Ich bin ein Entwickler mit großem Interesse an technologischer Innovation und kontinuierlichem Lernen. Ich arbeite gerne an kreativen und funktionalen Projekten, achte auf Details und biete den Nutzern einzigartige Erlebnisse. Wenn ich nicht programmiere, lerne ich gerne über Cybersicherheit und erkunde neue Tools im Web-Ökosystem.",
+    "aboutMeNote": "Leidenschaftlich für Kaffee und Softwareentwicklung ☕"
   },
   "projects": {
     "title": "Meine Projekte",

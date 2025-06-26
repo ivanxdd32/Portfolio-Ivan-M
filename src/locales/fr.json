@@ -5,15 +5,15 @@
     "contact": "Contact"
   },
   "home": {
-    "greeting": "Salut, je suis",
+    "greeting": "Bonjour, je suis",
     "description": "Développeur passionné par la technologie, la cybersécurité et le développement logiciel.",
     "techTitle": "Technologies et outils que je maîtrise",
     "languages": "Langages de programmation",
     "frameworks": "Frameworks et bibliothèques",
     "tools": "Outils et environnements",
     "aboutMeTitle": "À propos de moi",
-    "aboutMe": "Je suis un développeur web passionné par l'innovation technologique et l'apprentissage continu. J'aime travailler sur des projets créatifs et fonctionnels, en me concentrant sur les détails et en offrant des expériences uniques aux utilisateurs. Quand je ne code pas, j'explore la cybersécurité et les nouveaux outils du web.",
-    "aboutMeNote": "Passionné par le café et le développement web ☕"
+    "aboutMe": "Je suis un développeur très intéressé par l’innovation technologique et l’apprentissage continu. J’aime travailler sur des projets créatifs et fonctionnels, en me concentrant sur les détails et en offrant des expériences uniques aux utilisateurs. Quand je ne code pas, j’aime apprendre sur la cybersécurité et explorer de nouveaux outils du web.",
+    "aboutMeNote": "Passionné de café et de développement logiciel ☕"
   },
   "projects": {
     "title": "Mes Projets",
