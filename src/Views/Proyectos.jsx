@@ -137,10 +137,10 @@ export default function Proyectos() {
       setProyectoActivo(null);
       setAnimandoSalida(false);
 
-      // 🔥 Asegurar que animarSalida vuelva a false
+      // Asegura que animarSalida vuelva a false
       setAnimarSalida(false);
 
-      // Reiniciar animación de entrada de los proyectos
+      // Reinicia la animación de entrada de los proyectos
       setAnimandoEntrada(false);
       setTimeout(() => setAnimandoEntrada(true), 10);
       setTimeout(() => setAnimandoEntrada(false), 1200);
@@ -170,7 +170,7 @@ export default function Proyectos() {
     }),
     hidden: (i) => ({
       opacity: 0,
-      y: 10, // Se mueve hacia abajo al desaparecer
+      y: 10,
       transition: { duration: 0.05, delay: i * 0.02 },
     }),
   };

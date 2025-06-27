@@ -6,7 +6,7 @@ import { resolve } from "path";
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   base: "/",
-  publicDir: "public", // Asegura que Vite copie _redirects
+  publicDir: "public",
   build: {
     outDir: "dist",
     assetsDir: "assets",
@@ -18,7 +18,7 @@ export default defineConfig({
   },
   server: {
     fs: {
-      allow: ["public", "."], // Permitir acceso a la carpeta public
+      allow: ["public", "."],
     },
   },
 });
