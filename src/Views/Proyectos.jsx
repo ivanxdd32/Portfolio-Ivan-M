@@ -162,6 +162,14 @@ export default function Proyectos() {
     }, 0); // Espera antes de cambiar el estado
   };
 
+  useEffect(() => {
+    if (proyectoActivo) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+  }, [proyectoActivo]);
+
   const letterVariants = {
     visible: (i) => ({
       opacity: 1,
@@ -201,24 +209,31 @@ export default function Proyectos() {
         </motion.h2>
 
         {/* Proyectos */}
-        <div
-          className={`grid grid-cols-1 lg:grid-cols-3 gap-5 px-4 sm:px-6 md:px-10 lg:px-16 cursor-pointer 
-      ${proyectoActivo ? "opacity-0 pointer-events-none" : "opacity-100"} 
-      transition-opacity duration-500`}
+        <motion.div
+          className={`${
+            proyectoActivo ? "hidden" : "grid"
+          } grid-cols-1 lg:grid-cols-3 gap-5 px-4 sm:px-6 md:px-10 lg:px-16 cursor-pointer transition-opacity duration-500`}
+          variants={{
+            hidden: {},
+            visible: {
+              transition: {
+                staggerChildren: 0.1,
+              },
+            },
+          }}
+          initial="hidden"
+          animate={animarSalida ? "hidden" : "visible"}
         >
           {proyectos.map((proyecto, index) => (
             <motion.div
               key={proyecto.id}
-              className={`bg-gray-800 p-3 rounded-lg shadow-lg overflow-hidden 
-            ${animandoEntrada ? "animate__animated animate__bounceInUp" : ""}`}
-              style={{ animationDelay: `${index * 0.1}s` }}
-              onClick={() => handleProyectoClick(proyecto)}
-              initial={false}
-              animate={{
-                opacity: animarSalida ? 0 : 1,
-                scale: animarSalida ? 0.9 : 1,
+              variants={{
+                hidden: { opacity: 0, y: 50 },
+                visible: { opacity: 1, y: 0 },
               }}
-              transition={{ duration: 0.2 }}
+              transition={{ duration: 0.5 }}
+              className="bg-gray-800 p-3 rounded-lg shadow-lg overflow-hidden"
+              onClick={() => handleProyectoClick(proyecto)}
               whileHover={{ scale: 1.05 }}
             >
               <img
@@ -229,7 +244,7 @@ export default function Proyectos() {
               <h3 className="text-lg font-semibold mt-2">{proyecto.nombre}</h3>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {proyectoActivo && (
           <motion.div
