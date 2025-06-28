@@ -133,7 +133,7 @@ export default function Inicio() {
             transition={{ duration: 0.8, delay: 0.5 }}
           >
             {/* Columna izquierda - Texto */}
-            <div className="lg:p-10 lg:text-left space-y-4 lg:space-y-6 w-full h-full flex flex-col justify-center text-left lg:relative lg:bg-white lg:text-gray-800 rounded-l-lg">
+            <div className="lg:p-10 text-center lg:text-left space-y-4 lg:space-y-6 w-full h-full flex flex-col justify-center lg:relative lg:bg-white lg:text-gray-800 rounded-l-lg">
               <motion.h1
                 className="text-xl font-bold sm:text-3xl"
                 initial={{ opacity: 0, y: 50 }}
@@ -147,7 +147,7 @@ export default function Inicio() {
               </motion.h1>
 
               <motion.p
-                className="mt-4 text-md text-gray-300 sm:text-xl lg:text-gray-800 lg:pl-1"
+                className="mt-4 text-md text-white sm:text-xl lg:text-gray-800 lg:pl-1"
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.7 }}

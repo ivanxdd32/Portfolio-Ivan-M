@@ -189,10 +189,7 @@ export default function Proyectos() {
         title={t("meta.proyectos.title")}
         description={t("meta.proyectos.description")}
       />
-      <section className="min-h-screen flex flex-col items-center text-center bg-gray-900 text-white py-12 px-4 overflow-hidden">
-        {/* Espaciador visible solo en pantallas pequeñas */}
-        <div className="block sm:hidden h-16"></div>
-
+      <section className="min-h-screen flex flex-col items-center text-center bg-gray-900 text-white py-12 mt-10 sm:mt-0 px-4 overflow-hidden">
         <motion.h2 className="text-2xl font-bold text-center pt-4 pb-8 mt-4 sm:mt-16 md:mt-16 lg:mt-12">
           {textoAnimado.split("").map((letra, i) => (
             <motion.span
@@ -270,7 +267,7 @@ export default function Proyectos() {
             ></div>
 
             <motion.button
-              className="absolute top-18 right-6 sm:top-18 md:top-20 lg:top-20 lg:right-4 w-12 h-12 flex items-center z-10 cursor-pointer justify-center text-white text-2xl font-bold bg-gray-800 border border-gray-700 rounded-full shadow-lg hover:bg-gray-600 transition-all duration-300 animate__animated animate__backInRight"
+              className="absolute top-18 right-6 mt-4 sm:mt-0 md:mt-10 sm:top-18 md:top-20 lg:top-20 lg:right-4 w-12 h-12 flex items-center z-10 cursor-pointer justify-center text-white text-2xl font-bold bg-gray-800 border border-gray-700 rounded-full shadow-lg hover:bg-gray-600 transition-all duration-300 animate__animated animate__backInRight"
               onClick={cerrarProyecto}
               style={{ animationDelay: "0.5s" }}
               whileHover={{ scale: 1.1 }}
@@ -280,8 +277,8 @@ export default function Proyectos() {
             </motion.button>
 
             <motion.div
-              className="relative w-full max-w-lg md:max-w-3xl p-6 md:p-8 rounded-2xl border border-gray-700/50 shadow-xl 
-            bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-white max-h-[80vh] overflow-y-auto animate__animated animate__bounceIn"
+              className="relative w-full max-w-sm sm:max-w-md md:max-w-3xl p-4 py-24 sm:p-6 md:p-8 rounded-2xl border border-gray-700/50 shadow-xl 
+              bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-white max-h-[85vh] overflow-y-auto animate__animated animate__bounceIn"
               style={{ animationDelay: "0.5s" }}
             >
               <h2 className="text-3xl md:text-4xl font-extrabold text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-300">
