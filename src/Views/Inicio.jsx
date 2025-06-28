@@ -31,6 +31,9 @@ import {
   SiHtml5,
   SiCss3,
   SiExpress,
+  SiVite,
+  SiFramer,
+  SiGreensock,
 } from "react-icons/si";
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
@@ -197,13 +200,12 @@ export default function Inicio() {
           )}
         </section>
 
-        {/* TECNOLOGÍAS */}
         <section
           ref={nextSectionRef}
           className="min-h-screen py-24 pt-28 md:pt-24 px-6 md:px-12 bg-gradient-to-b from-gray-900 via-gray-950 to-black text-white"
         >
           <motion.h2
-            className="text-4xl font-extrabold text-center mb-16"
+            className="text-4xl font-extrabold text-center mb-10 md:mb-12"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -211,10 +213,10 @@ export default function Inicio() {
             {t("home.techTitle")}
           </motion.h2>
 
-          <div className="flex flex-col lg:flex-row gap-12 justify-center items-stretch max-w-6xl mx-auto">
-            {/* Lenguajes de Programación */}
+          <div className="grid gap-6 md:gap-8 lg:gap-10 lg:grid-cols-3 max-w-6xl mx-auto h-[calc(100%-7rem)] items-center">
+            {/* Lenguajes */}
             <SectionCard title={t("home.languages")} color="text-yellow-400">
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 place-items-center gap-4">
                 <SkillCard
                   icon={<SiJavascript />}
                   label="JavaScript"
@@ -242,14 +244,20 @@ export default function Inicio() {
               </div>
             </SectionCard>
 
-            {/* Frameworks y Librerías */}
+            {/* Frameworks */}
             <SectionCard title={t("home.frameworks")} color="text-blue-400">
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-3 place-items-center gap-3 scale-90">
                 <SkillCard
                   icon={<FaReact />}
                   label="React"
                   color="text-blue-400"
                   url="https://react.dev/"
+                />
+                <SkillCard
+                  icon={<SiVite />}
+                  label="Vite"
+                  color="text-purple-400"
+                  url="https://vitejs.dev/"
                 />
                 <SkillCard
                   icon={<SiTailwindcss />}
@@ -258,45 +266,66 @@ export default function Inicio() {
                   url="https://tailwindcss.com/docs"
                 />
                 <SkillCard
+                  icon={<SiFramer />}
+                  label="Framer M."
+                  color="text-pink-400"
+                  url="https://www.framer.com/motion/"
+                />
+                <SkillCard
+                  icon={<SiGreensock />}
+                  label="GSAP"
+                  color="text-green-500"
+                  url="https://greensock.com/gsap/"
+                />
+                <SkillCard
                   icon={<FaNodeJs />}
                   label="Node.js"
                   color="text-green-500"
                   url="https://nodejs.org/en/docs/"
                 />
-                <SkillCard
-                  icon={<SiExpress />}
-                  label="Express.js"
-                  color="text-gray-300"
-                  url="https://expressjs.com/"
-                />
+                <div className="col-span-3 flex justify-center">
+                  <SkillCard
+                    icon={<SiExpress />}
+                    label="Express.js"
+                    color="text-gray-300"
+                    url="https://expressjs.com/"
+                  />
+                </div>
               </div>
             </SectionCard>
 
-            {/* Herramientas y Entornos */}
+            {/* Herramientas */}
             <SectionCard title={t("home.tools")} color="text-green-400">
-              <div className="grid grid-cols-2 gap-4">
-                <SkillCard
-                  icon={<FaGitAlt />}
-                  label="Git"
-                  color="text-red-500"
-                  url="https://git-scm.com/doc"
-                />
-                <SkillCard
-                  icon={<FaGithub />}
-                  label="GitHub"
-                  color="text-gray-400"
-                  url="https://docs.github.com/en"
-                />
-                <SkillCard
-                  icon={<SiPostman />}
-                  label="Postman"
-                  color="text-orange-500"
-                  url="https://learning.postman.com/docs/getting-started/introduction/"
-                />
+              <div className="grid grid-cols-2 place-items-center gap-4">
+                <div className="col-span-3 flex justify-center gap-4">
+                  <SkillCard
+                    icon={<FaGitAlt />}
+                    label="Git"
+                    color="text-red-500"
+                    url="https://git-scm.com/doc"
+                    className="p-2 px-4"
+                  />
+                  <SkillCard
+                    icon={<FaGithub />}
+                    label="GitHub"
+                    color="text-gray-400"
+                    url="https://docs.github.com/en"
+                    className="p-2 px-4"
+                  />
+                </div>
+                <div className="col-span-3 flex justify-center">
+                  <SkillCard
+                    icon={<SiPostman />}
+                    label="Postman"
+                    color="text-orange-500"
+                    url="https://learning.postman.com/docs/getting-started/introduction/"
+                  />
+                </div>
               </div>
             </SectionCard>
           </div>
         </section>
+
         <section
           ref={thirdSectionRef}
           className="min-h-screen flex flex-col lg:flex-row items-center justify-center bg-[#0A0B0A] text-white px-10 pt-28 md:pt-0"
